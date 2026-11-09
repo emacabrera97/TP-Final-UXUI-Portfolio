@@ -1,0 +1,270 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>Proceso UX/UI · Portfolio de Emanuel Cabrera</title>
+<style>
+  @font-face { font-family: "Archivo"; font-weight: 400 700; src: url("../../assets/fonts/archivo-latin-var.woff2") format("woff2"); }
+  @font-face { font-family: "Unbounded"; font-weight: 800; src: url("../../assets/fonts/unbounded-latin-800.woff2") format("woff2"); }
+  @page { size: 1280px 720px; margin: 0; }
+  :root { --bg:#12082b; --surface:#1e1040; --raised:#2a1858; --line:#4a2f8f; --text:#f5ecff; --muted:#bba9e0; --magenta:#ff2e93; --cyan:#2de2e6; --amber:#ffb547; --ok:#4df0a0; }
+  * { box-sizing: border-box; margin: 0; }
+  html, body { background: var(--bg); }
+  body { font-family: "Archivo", system-ui, sans-serif; color: var(--text); -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  .slide { width: 1280px; height: 720px; padding: 56px 72px 48px; position: relative; overflow: hidden; page-break-after: always; break-after: page; display: flex; flex-direction: column; background: var(--bg); }
+  .slide::after { content: attr(data-n) " / 10"; position: absolute; right: 72px; bottom: 24px; font-size: 13px; color: var(--muted); }
+  .slide::before { content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 6px; background: linear-gradient(90deg, var(--magenta), var(--amber)); }
+  h1 { font: 800 78px/1.02 "Unbounded"; letter-spacing: -0.01em; }
+  h2 { font: 800 40px/1.1 "Unbounded"; letter-spacing: -0.01em; margin-bottom: 8px; }
+  .kicker { font-size: 15px; font-weight: 600; color: var(--magenta); margin-bottom: 10px; }
+  .sub { color: var(--muted); font-size: 19px; line-height: 1.45; max-width: 860px; margin-bottom: 26px; }
+  h3 { font-size: 21px; font-weight: 700; margin-bottom: 8px; }
+  p, li { font-size: 17px; line-height: 1.45; }
+  ul { padding-left: 20px; } li + li { margin-top: 5px; }
+  .muted { color: var(--muted); }
+  .grid { display: grid; gap: 22px; flex: 1; min-height: 0; }
+  .c2 { grid-template-columns: 1fr 1fr; } .c3 { grid-template-columns: repeat(3, 1fr); } .c4 { grid-template-columns: repeat(4, 1fr); }
+  .card { background: var(--surface); border: 1px solid var(--line); border-radius: 4px; padding: 22px 24px; min-height: 0; }
+  .card h3 small { display: block; font-size: 13px; font-weight: 500; color: var(--muted); margin-top: 2px; }
+  .tag { display: inline-block; font-size: 13px; font-weight: 700; padding: 2px 8px; border-radius: 2px; margin-bottom: 8px; }
+  .ok { color: var(--ok); } .bad { color: var(--magenta); } .use { color: var(--cyan); }
+  .label { font-size: 13px; font-weight: 700; letter-spacing: .02em; text-transform: uppercase; margin: 12px 0 4px; }
+  .label:first-of-type { margin-top: 0; }
+  .note { font-size: 14px; color: var(--muted); margin-top: 12px; }
+  .pending { border: 1.5px dashed var(--amber); color: var(--amber); padding: 10px 14px; border-radius: 4px; font-size: 15px; font-weight: 600; }
+  table { border-collapse: collapse; width: 100%; font-size: 15px; }
+  th, td { border: 1px solid var(--line); padding: 9px 12px; text-align: left; vertical-align: top; }
+  th { background: var(--raised); font-weight: 700; }
+  .sw { display: flex; gap: 10px; margin: 8px 0 12px; }
+  .sw i { display: block; width: 54px; height: 54px; border: 1px solid var(--line); border-radius: 4px; }
+  .map { display: flex; flex-direction: column; align-items: center; gap: 0; }
+  .node { background: var(--raised); border: 1px solid var(--line); border-radius: 4px; padding: 8px 14px; font-weight: 700; font-size: 15px; }
+  .node.root { background: var(--magenta); color: var(--bg); border-color: var(--magenta); }
+  .row { display: flex; gap: 10px; flex-wrap: wrap; justify-content: center; }
+  .stem { width: 1px; height: 16px; background: var(--line); }
+  .metric { font-size: 44px; font-weight: 700; line-height: 1; } .metric small { display:block; font-size: 14px; font-weight: 400; color: var(--muted); margin-top: 6px; }
+  img.shot { width: 100%; border: 1px solid var(--line); border-radius: 4px; display: block; }
+  .cover { justify-content: center; }
+  .cover .line { height: 2px; background: var(--amber); width: 100%; margin: 28px 0; }
+</style>
+</head>
+<body>
+
+<!-- 1. Portada -->
+<section class="slide cover" data-n="1">
+  <p class="kicker">Diseño UX-UI 2026 · Trabajo final · Lic. en Sistemas de Información, FCyT</p>
+  <h1>Proceso de diseño<br>del portfolio</h1>
+  <div class="line"></div>
+  <p class="sub" style="margin:0">Emanuel Cabrera · Front-end developer jr. con base en UX/UI<br>Docente: Mg. Ernesto Ledesma</p>
+  <p class="note">Sitio: emacabrera97.github.io/TP-Final-UXUI-Portfolio · Código: github.com/emacabrera97/TP-Final-UXUI-Portfolio</p>
+</section>
+
+<!-- 2. Usuario -->
+<section class="slide" data-n="2">
+  <p class="kicker">1 · Usuario objetivo</p>
+  <h2>Quién visita el portfolio</h2>
+  <p class="sub">Apunto a empresas e instituciones que ofrecen una primera experiencia en desarrollo: pasantías y puestos junior.</p>
+  <div class="grid c2">
+    <div class="card">
+      <h3>Proto-persona <small>Hipótesis de trabajo, no una persona real</small></h3>
+      <p><b>Laura, 34 · Recruiter IT en una empresa regional de software.</b></p>
+      <div class="label muted">Necesita</div>
+      <ul><li>Descartar rápido: ¿tiene base técnica y está disponible?</li><li>Ver trabajo real, no solo una lista de tecnologías.</li><li>Contactar sin buscar.</li></ul>
+      <div class="label muted">Frustraciones</div>
+      <ul><li>Portfolios abstractos que no dicen qué hace la persona.</li><li>Proyectos sin resultado ni rol.</li></ul>
+    </div>
+    <div class="card">
+      <h3>Escenario de uso</h3>
+      <p>Laura tiene 20 candidatos para una pasantía y abre cada portfolio unos segundos, probablemente desde el celular entre reuniones. Quiere saber quién es, qué sabe hacer y cómo escribirle.</p>
+      <div class="label use">Lo que debe encontrar en 30 segundos</div>
+      <ul><li><b>Rol</b> y propuesta de valor, arriba de todo.</li><li><b>Disponibilidad</b> para prácticas y zona horaria.</li><li><b>Proyectos</b> con problema, proceso y resultado.</li><li><b>Email</b> a un clic.</li></ul>
+    </div>
+  </div>
+</section>
+
+<!-- 3. Benchmark -->
+<section class="slide" data-n="3">
+  <p class="kicker">2 · Benchmark</p>
+  <h2>Tres portfolios de referencia</h2>
+  <p class="sub" style="margin-bottom:16px">Seleccionados de la lista developer-portfolios. Análisis hecho sobre el texto de cada página.</p>
+  <div class="grid c3">
+    <div class="card">
+      <h3>Asmaa Abdul-Amin <small>asmaa.dev · front-end</small></h3>
+      <div class="label ok">Funciona</div>
+      <ul><li>Experiencia en una institución reconocida y stack por cada rol.</li><li>CV a un clic desde el menú.</li></ul>
+      <div class="label bad">No funciona</div>
+      <ul><li>Hero abstracto: hay que leer más para entender qué hace.</li><li>“Work with me” apunta a clientes, no a empleadores.</li><li>Sin disponibilidad ni métricas en los casos.</li></ul>
+    </div>
+    <div class="card">
+      <h3>Adham Dannaway <small>adhamdannaway.com · UI y front-end</small></h3>
+      <div class="label ok">Funciona</div>
+      <ul><li>Menú corto de 5 links.</li><li>Hero en dos tarjetas claras y 3 proyectos visibles al entrar.</li></ul>
+      <div class="label bad">No funciona</div>
+      <ul><li>Tarjetas sin resultado ni rol: hay que hacer clic para saber algo.</li><li>Sin email ni CV en la home.</li><li>Doble posicionamiento (diseñador y desarrollador).</li></ul>
+    </div>
+    <div class="card">
+      <h3>Mădălina Gheorghe <small>madalinaeleonorag.github.io · front-end → UX</small></h3>
+      <div class="label ok">Funciona</div>
+      <ul><li>Orden claro y un caso de estudio real (DoseSync).</li><li>Recomendaciones de terceros y certificados verificables.</li></ul>
+      <div class="label bad">No funciona</div>
+      <ul><li>“Learning” y “transition” restan valor al mensaje.</li><li>Contacto solo con íconos y 3 botones de CV distintos.</li><li>Sin disponibilidad.</li></ul>
+    </div>
+  </div>
+  <p class="note">Limitación: la lectura fue del contenido de texto, no del diseño visual.</p>
+</section>
+
+<!-- 4. Qué tomo -->
+<section class="slide" data-n="4">
+  <p class="kicker">2 · Benchmark</p>
+  <h2>Qué tomo y qué evito</h2>
+  <p class="sub">Los tres tienen el mismo punto ciego: no dicen cuándo ni para qué están disponibles. Es lo que más busca Laura.</p>
+  <table>
+    <tr><th style="width:30%">Problema observado</th><th style="width:34%">Decisión en mi portfolio</th><th>Dónde se ve</th></tr>
+    <tr><td>Hero abstracto o con dos identidades</td><td>Un solo rol, una frase concreta: “Front-end developer jr. con base en UX/UI”</td><td>Hero</td></tr>
+    <tr><td>Sin disponibilidad</td><td>Badge “Disponible para prácticas” con ubicación y GMT</td><td>Hero</td></tr>
+    <tr><td>CTAs pensados para clientes</td><td>“Ver proyectos” y “Contactar”</td><td>Hero y header</td></tr>
+    <tr><td>Proyectos sin resultado ni rol</td><td>Cada tarjeta lleva resultado o aprendizaje, año y herramientas</td><td>Proyectos</td></tr>
+    <tr><td>Contacto escondido o solo con íconos</td><td>Email grande con <code>mailto:</code> y redes con texto</td><td>Contacto</td></tr>
+    <tr><td>Muchos links de menú o CV repetidos</td><td>5 anclas y un solo CTA de contacto</td><td>Header</td></tr>
+  </table>
+  <p class="note">Adopto: el menú corto de Adham y la lógica de caso de estudio de Mădălina.</p>
+</section>
+
+<!-- 5. Concepto -->
+<section class="slide" data-n="5">
+  <p class="kicker">3 · Concepto visual</p>
+  <h2>El nombre es el horizonte</h2>
+  <p class="sub">Una escena synthwave donde el nombre queda cortado por la línea del horizonte y se refleja sobre una grilla en perspectiva.</p>
+  <div class="grid c3">
+    <div class="card"><h3>Nocturno</h3><p class="muted">Se siente como una pantalla de noche, concentrada.</p>
+      <div class="sw"><i style="background:#12082b"></i><i style="background:#1e1040"></i><i style="background:#2a1858"></i></div>
+      <p>Fondo índigo #12082B y capas más claras para paneles.</p></div>
+    <div class="card"><h3>Preciso</h3><p class="muted">Ordenado, medido, sin adorno gratuito.</p>
+      <div class="sw"><i style="background:#ff2e93"></i><i style="background:#2de2e6"></i><i style="background:#4a2f8f"></i></div>
+      <p>Grilla y filetes de 1 px, radio de 4 px, espaciado en múltiplos de 4 y 8. Unbounded para títulos, Archivo para texto.</p></div>
+    <div class="card"><h3>Cálido</h3><p class="muted">Cercano, que invita a escribir.</p>
+      <div class="sw"><i style="background:#ffb547"></i><i style="background:#f5ecff"></i><i style="background:#bba9e0"></i></div>
+      <p>Ámbar solo para la luz del horizonte; texto en primera persona y directo.</p></div>
+  </div>
+  <p class="note">Imágenes: ilustraciones propias (horizonte, sol, grilla) y mockups marcados como ilustrativos, sin fotos de stock.</p>
+</section>
+
+<!-- 6. IA -->
+<section class="slide" data-n="6">
+  <p class="kicker">4 · Arquitectura de información</p>
+  <h2>Sitemap y agrupación del contenido</h2>
+  <p class="sub" style="margin-bottom:14px">Un one-page con anclas y una página interna de caso de estudio.</p>
+  <div class="grid c2" style="grid-template-columns: 1.15fr .85fr;">
+    <div class="card map">
+      <div class="node root">Inicio · one-page</div><div class="stem"></div>
+      <div class="row"><div class="node">Header</div><div class="node">Hero + métricas</div><div class="node">Proyectos</div><div class="node">Skills</div><div class="node">Recorrido</div><div class="node">Sobre mí</div><div class="node">Contacto</div><div class="node">Footer</div></div>
+      <div class="stem"></div>
+      <div class="row"><div class="node" style="border-color:var(--magenta)">Caso de estudio (página interna)</div><div class="node" style="border-color:var(--amber)">404</div></div>
+    </div>
+    <div class="card">
+      <h3>Card sorting simple</h3>
+      <p class="muted" style="font-size:15px">Agrupé las tarjetas de contenido por la pregunta que responde cada una:</p>
+      <ul style="font-size:15px;margin-top:8px">
+        <li><b>¿Quién es?</b> nombre, rol, disponibilidad, sobre mí</li>
+        <li><b>¿Qué hizo?</b> proyectos, casos de estudio, métricas</li>
+        <li><b>¿Qué sabe?</b> skills, herramientas, cursos</li>
+        <li><b>¿Cómo se trabaja con esa persona?</b> principios, recorrido</li>
+        <li><b>¿Cómo la contacto?</b> email, LinkedIn, GitHub</li>
+      </ul>
+      <p class="note">Orden elegido: proyectos antes que skills, porque la prueba de trabajo pesa más que la lista de herramientas.</p>
+    </div>
+  </div>
+</section>
+
+<!-- 7. Design system -->
+<section class="slide" data-n="7">
+  <p class="kicker">5 · Design system</p>
+  <h2>Sistema mínimo en Figma</h2>
+  <div class="grid c2" style="grid-template-columns: 1.1fr .9fr; align-items:start;">
+    <div><img class="shot" src="figma-componentes.png" alt="Componentes del design system en Figma: botones en cuatro estados, links, selector de idioma y métricas"></div>
+    <div>
+      <img class="shot" src="figma-color.png" alt="Paleta de color del design system en Figma" style="margin-bottom:14px">
+      <ul style="font-size:16px">
+        <li><b>Color:</b> fondos, líneas, texto, acentos y estados como variables.</li>
+        <li><b>Tipografía:</b> 2 familias y una escala para desktop y otra para mobile.</li>
+        <li><b>Espaciado y grilla:</b> múltiplos de 4 y 8; 12 columnas en 1280 y 4 en 375.</li>
+        <li><b>Componentes:</b> botón (default, hover, active, focus), links, selector de idioma, métrica y fila de lista.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- 8. Figma al sitio -->
+<section class="slide" data-n="8">
+  <p class="kicker">6 · Prototipo y sitio</p>
+  <h2>Del prototipo en Figma al sitio</h2>
+  <p class="sub" style="margin-bottom:14px">Prototipo de alta fidelidad en desktop (1280) y mobile (375), con el menú mobile y el caso de estudio.</p>
+  <div class="grid c2" style="grid-template-columns: 1.3fr .7fr; align-items:start;">
+    <div><img class="shot" src="captura-desktop.webp" alt="Captura del sitio publicado: hero con el nombre sobre el horizonte"><p class="note">Sitio publicado, hero en 1280 px.</p></div>
+    <div class="card">
+      <h3>Decisiones implementadas</h3>
+      <ul style="font-size:16px">
+        <li>Los tokens del Figma son variables CSS con los mismos valores.</li>
+        <li>Menú mobile con <code>aria-expanded</code> y foco cian.</li>
+        <li>Hover en tarjetas: el mockup se eleva y el borde pasa a magenta.</li>
+        <li>Selector ES/EN, caso de estudio y 404.</li>
+      </ul>
+      <p class="note">Falta agregar acá la comparación lado a lado Figma / sitio de 2 secciones.</p>
+    </div>
+  </div>
+</section>
+
+<!-- 9. Test -->
+<section class="slide" data-n="9">
+  <p class="kicker">7 · Validación</p>
+  <h2>Test de usabilidad con 3 personas</h2>
+  <div class="pending" style="margin-bottom:16px">Pendiente: completar con los resultados de las sesiones reales antes de entregar.</div>
+  <div class="grid c2" style="grid-template-columns: .8fr 1.2fr;">
+    <div class="card">
+      <h3>Tareas</h3>
+      <ol style="padding-left:22px;font-size:16px">
+        <li>Encontrá el email de contacto.</li>
+        <li>Abrí el proyecto más reciente.</li>
+        <li>Decime en qué herramientas trabaja.</li>
+        <li>Averiguá si está disponible para una pasantía.</li>
+      </ol>
+      <p class="note">Se mide: si lo logra, cuánto tarda y dónde duda.</p>
+    </div>
+    <div>
+      <table>
+        <tr><th>Tarea</th><th>Persona 1</th><th>Persona 2</th><th>Persona 3</th></tr>
+        <tr><td>1 · Email</td><td>…</td><td>…</td><td>…</td></tr>
+        <tr><td>2 · Proyecto</td><td>…</td><td>…</td><td>…</td></tr>
+        <tr><td>3 · Herramientas</td><td>…</td><td>…</td><td>…</td></tr>
+        <tr><td>4 · Disponibilidad</td><td>…</td><td>…</td><td>…</td></tr>
+      </table>
+      <table style="margin-top:14px">
+        <tr><th>Hallazgo</th><th>Cambio aplicado</th></tr>
+        <tr><td>…</td><td>…</td></tr>
+        <tr><td>…</td><td>…</td></tr>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- 10. Resultados -->
+<section class="slide" data-n="10">
+  <p class="kicker">8 · Resultados</p>
+  <h2>Accesibilidad, performance y entrega</h2>
+  <p class="sub">Lighthouse mobile sobre la URL pública (09/11/2026).</p>
+  <div class="grid c4" style="flex:none;margin-bottom:22px">
+    <div class="card"><div class="metric ok">98<small>Performance (inicio)</small></div></div>
+    <div class="card"><div class="metric ok">100<small>Accessibility</small></div></div>
+    <div class="card"><div class="metric ok">100<small>Best Practices</small></div></div>
+    <div class="card"><div class="metric ok">100<small>SEO</small></div></div>
+  </div>
+  <div class="grid c2">
+    <div class="card"><h3>Calidad técnica</h3>
+      <ul style="font-size:16px"><li>Caso de estudio: 96 / 100 / 100 / 100.</li><li>Navegable 100% con teclado, skip link y foco visible.</li><li>Probado en 375, 768 y 1280 px sin scroll horizontal.</li><li>Respeta <code>prefers-reduced-motion</code>.</li></ul></div>
+    <div class="card"><h3>Entrega</h3>
+      <ul style="font-size:16px"><li>Deploy automático con GitHub Actions en cada push a main.</li><li>Repositorio con commits incrementales y README completo.</li><li>Uso de IA declarado en el README.</li></ul></div>
+  </div>
+</section>
+
+</body>
+</html>
