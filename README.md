@@ -92,14 +92,16 @@ assets/               fuentes woff2, íconos SVG, imágenes WebP y SVG exportada
 - Imágenes en **WebP** 1x/2x con `srcset`, `width`/`height` y `loading="lazy"` debajo del pliegue.
 - Metadatos completos: `title`, `meta description`, Open Graph (`og:title`, `og:description`, `og:image`), `theme-color`, favicon, `viewport` y `canonical`.
 
-**Lighthouse mobile** (medido en local antes del deploy, 09/11/2026):
+**Lighthouse mobile** sobre la URL pública (09/11/2026):
 
 | Página | Performance | Accessibility | Best Practices | SEO |
 |---|---|---|---|---|
-| Inicio | 98 | 100 | 100 | 100 |
-| Caso de estudio | 100 | 100 | 100 | 100 |
+| [Inicio](docs/lighthouse-mobile.png) | 98 | 100 | 100 | 100 |
+| [Caso de estudio](docs/lighthouse-mobile-caso.png) | 96 | 100 | 100 | 100 |
 
-> Pendiente: agregar en `docs/` la captura del reporte Lighthouse sobre la URL pública.
+![Reporte Lighthouse mobile de la página de inicio: 98, 100, 100 y 100](docs/lighthouse-mobile.png)
+
+![Reporte Lighthouse mobile del caso de estudio: 96, 100, 100 y 100](docs/lighthouse-mobile-caso.png)
 
 ## Deploy (GitHub Pages con GitHub Actions)
 
