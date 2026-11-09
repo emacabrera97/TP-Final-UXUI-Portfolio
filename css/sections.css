@@ -1,0 +1,280 @@
+/* ==========================================================================
+   Secciones del one-page
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   Hero — "el nombre es el horizonte"
+   La segunda línea del nombre queda cortada por la línea ámbar; su reflejo
+   magenta se hunde en la grilla en perspectiva.
+   -------------------------------------------------------------------------- */
+.hero {
+  --horizon: 11.875rem;   /* 190 mobile */
+  --glow-h: 6.875rem;     /* 110 mobile */
+  --cut: 0.14em;          /* parte de la 2.ª línea que queda bajo el horizonte */
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+}
+
+.hero__glow {
+  position: absolute;
+  z-index: -1;
+  left: 0;
+  right: 0;
+  top: calc(var(--horizon) - var(--glow-h));
+  height: var(--glow-h);
+  background: linear-gradient(
+    to bottom,
+    rgb(255 181 71 / 0) 0%,
+    rgb(255 46 147 / 0.18) 70%,
+    rgb(255 181 71 / 0.55) 100%
+  );
+}
+
+/* Línea del horizonte (ámbar = solo luz del horizonte) */
+.hero__glow::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -1px;
+  height: 2px;
+  background: var(--amber);
+}
+
+.hero__floor {
+  position: absolute;
+  z-index: -2;
+  top: var(--horizon);
+  left: 0;
+  right: 0;
+  bottom: 0;
+  overflow: hidden;
+}
+
+.hero__floor img {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 3640px;
+  height: 634px;
+  max-width: none;
+  transform: translateX(-50%);
+}
+
+/* Sombra sobre la grilla para que el texto se lea (mobile: vertical) */
+.hero__vignette {
+  position: absolute;
+  z-index: -1;
+  top: calc(var(--horizon) + 3.125rem);
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    to bottom,
+    rgb(18 8 43 / 0.55) 0%,
+    rgb(18 8 43 / 0.82) 15%,
+    rgb(18 8 43 / 0.88) 100%
+  );
+}
+
+.hero__inner {
+  position: relative;
+}
+
+.hero__sky {
+  height: var(--horizon);
+  display: flex;
+  align-items: flex-end;
+  overflow: hidden;
+}
+
+.hero__name,
+.hero__mirror {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: var(--fs-display-name);
+  line-height: 0.92;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+
+.hero__name {
+  margin-bottom: calc(-1 * var(--cut));
+}
+
+.hero__line {
+  display: block;
+  white-space: nowrap;
+}
+
+.hero__reflection {
+  position: absolute;
+  top: var(--horizon);
+  left: 0;
+  right: 0;
+  height: 1.2em;
+  overflow: hidden;
+  font-size: var(--fs-display-name);
+  pointer-events: none;
+}
+
+.hero__mirror {
+  margin-top: calc(-1 * var(--cut));
+  color: var(--magenta);
+  opacity: 0.28;
+  transform: scaleY(-1);
+}
+
+.hero__reflection::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, rgb(18 8 43 / 0) 0%, var(--bg-base) 100%);
+}
+
+.hero__body {
+  position: relative;
+  display: grid;
+  gap: var(--space-16);
+  margin-top: var(--space-72);
+  padding-bottom: var(--space-48);
+}
+
+.hero__intro {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-16);
+}
+
+.hero__role {
+  font-size: var(--fs-lead);
+  line-height: var(--lh-lead);
+  font-weight: 600;
+}
+
+.hero__pitch {
+  max-width: 29.375rem;
+  color: var(--text-muted);
+  font-size: var(--fs-intro);
+  line-height: var(--lh-intro);
+}
+
+.hero__ctas {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-12);
+  padding-top: var(--space-8);
+}
+
+.hero__readout {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-16);
+  padding-top: var(--space-16);
+}
+
+.hero__readout abbr {
+  text-decoration: none;
+}
+
+/* Métricas mobile: 2 × 2 con filetes */
+.metrics {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin: 0;
+  border-bottom: var(--hairline);
+}
+
+.metrics .metric {
+  padding-block: 0.875rem;
+  border-top: var(--hairline);
+}
+
+.metrics .metric:nth-child(even) {
+  padding-left: var(--space-16);
+  border-left: var(--hairline);
+}
+
+/* Tablet: CTAs en fila y métricas como lectura horizontal */
+@media (min-width: 48em) {
+  .hero {
+    --horizon: 16.25rem;   /* 260 */
+    --glow-h: 8.75rem;
+    --cut: 0.2em;
+  }
+
+  .hero__floor img {
+    width: 10920px;
+    height: 394px;
+  }
+
+  .hero__vignette {
+    top: calc(var(--horizon) + 3.75rem);
+    background: linear-gradient(
+      90deg,
+      rgb(18 8 43 / 0.94) 0%,
+      rgb(18 8 43 / 0.55) 42%,
+      rgb(18 8 43 / 0.55) 58%,
+      rgb(18 8 43 / 0.94) 100%
+    );
+  }
+
+  .hero__body {
+    margin-top: var(--space-72);
+    gap: var(--space-40);
+    padding-bottom: var(--space-96);
+  }
+
+  .hero__intro {
+    gap: var(--space-20);
+  }
+
+  .hero__ctas {
+    flex-direction: row;
+    gap: var(--space-16);
+  }
+
+  .hero__readout {
+    gap: var(--space-20);
+    padding-top: 0;
+  }
+
+  .metrics {
+    display: flex;
+    border-bottom: 0;
+  }
+
+  .metrics .metric,
+  .metrics .metric:nth-child(even) {
+    padding: 0 var(--space-20);
+    border-top: 0;
+    border-left: var(--hairline);
+  }
+
+  .metrics .metric:first-child {
+    padding-left: 0;
+    border-left: 0;
+  }
+}
+
+/* Desktop 1280: horizonte a 330 px, intro a la izquierda y lectura a la derecha */
+@media (min-width: 64em) {
+  .hero {
+    --horizon: 20.625rem;  /* 330 */
+    --glow-h: 9.375rem;    /* 150 */
+    --cut: 0.24em;
+  }
+
+  .hero__body {
+    grid-template-columns: minmax(0, 29.375rem) minmax(0, 29.375rem);
+    justify-content: space-between;
+    align-items: start;
+    margin-top: 5.625rem; /* 90 */
+    padding-bottom: var(--space-112);
+  }
+
+  .hero__readout {
+    padding-top: var(--space-4);
+  }
+}

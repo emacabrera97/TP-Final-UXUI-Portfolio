@@ -32,6 +32,7 @@
   <link rel="stylesheet" href="css/base.css">
   <link rel="stylesheet" href="css/components.css">
   <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/sections.css">
 
   <!-- Marca que JS está disponible antes del primer render (evita parpadeo del menú) -->
   <script>document.documentElement.classList.replace("no-js", "js");</script>
@@ -90,8 +91,69 @@
   </header>
 
   <main id="contenido" tabindex="-1">
-    <section id="inicio" aria-label="Presentación">
-      <h1>Emanuel Cabrera</h1>
+    <section class="hero" id="inicio" aria-label="Presentación" data-i18n-aria="hero_label">
+      <!-- Capas decorativas: luz del horizonte, grilla en perspectiva y viñeta -->
+      <div class="hero__glow" aria-hidden="true"></div>
+      <div class="hero__floor" aria-hidden="true">
+        <picture>
+          <source media="(min-width: 48em)" srcset="assets/img/grid-floor-hero.svg" width="10920" height="394">
+          <img src="assets/img/grid-floor-hero-mobile.svg" alt="" width="3640" height="634" decoding="async" fetchpriority="low">
+        </picture>
+      </div>
+      <div class="hero__vignette" aria-hidden="true"></div>
+
+      <div class="container hero__inner">
+        <!-- El nombre es el horizonte: la segunda línea queda cortada por la línea ámbar -->
+        <div class="hero__sky">
+          <h1 class="hero__name">
+            <span class="hero__line">Emanuel</span>
+            <span class="hero__line">Cabrera</span>
+          </h1>
+        </div>
+        <div class="hero__reflection" aria-hidden="true">
+          <div class="hero__mirror">
+            <span class="hero__line">Emanuel</span>
+            <span class="hero__line">Cabrera</span>
+          </div>
+        </div>
+
+        <div class="hero__body">
+          <div class="hero__intro">
+            <p class="hero__role" data-i18n="hero_role">Front-end developer jr. con base en UX/UI</p>
+            <p class="hero__pitch" data-i18n="hero_pitch">Construyo sitios en HTML y CSS que se entienden en 30 segundos, se usan con teclado y cargan rápido.</p>
+            <div class="hero__ctas">
+              <a class="btn btn--primary" href="#projects" data-i18n="cta_projects">Ver proyectos</a>
+              <a class="btn btn--secondary" href="#contact" data-i18n="cta_contact">Contactar</a>
+            </div>
+          </div>
+
+          <div class="hero__readout">
+            <p class="availability">
+              <img src="assets/icons/dot-success.svg" alt="" width="8" height="8">
+              <span><span data-i18n="hero_available">Disponible para prácticas</span> · Buenos Aires, <abbr title="Hora de Argentina, UTC−3">GMT-3</abbr></span>
+            </p>
+            <h2 class="visually-hidden" id="metricas" data-i18n="metrics_title">Highlights en números</h2>
+            <dl class="metrics" aria-labelledby="metricas">
+              <div class="metric">
+                <dt data-i18n="metric_cases">casos de estudio</dt>
+                <dd>3</dd>
+              </div>
+              <div class="metric">
+                <dt data-i18n="metric_years">años de carrera</dt>
+                <dd>2</dd>
+              </div>
+              <div class="metric">
+                <dt data-i18n="metric_tools">herramientas</dt>
+                <dd>12</dd>
+              </div>
+              <div class="metric">
+                <dt data-i18n="metric_courses">cursos</dt>
+                <dd>5</dd>
+              </div>
+            </dl>
+          </div>
+        </div>
+      </div>
     </section>
 
     <section id="projects" aria-labelledby="projects-title">
