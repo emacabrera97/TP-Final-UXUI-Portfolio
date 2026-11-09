@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="es" class="no-js">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- GitHub Pages sirve esta página para cualquier ruta inexistente: la base fija las rutas relativas -->
+  <base href="/TP-Final-UXUI-Portfolio/">
+  <title>Página no encontrada · Emanuel Cabrera</title>
+  <meta name="description" content="Esta página no existe. Volvé al portfolio de Emanuel Cabrera.">
+  <meta name="robots" content="noindex">
+  <meta name="theme-color" content="#12082B">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+
+  <link rel="preload" href="assets/fonts/unbounded-latin-800.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/archivo-latin-var.woff2" as="font" type="font/woff2" crossorigin>
+
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/sections.css">
+
+  <script>document.documentElement.classList.replace("no-js", "js");</script>
+  <script src="js/main.js" defer></script>
+  <script src="js/i18n.js" defer></script>
+</head>
+<body data-page="notfound">
+  <a class="skip-link" href="404.html#contenido" data-i18n="skip">Saltar al contenido</a>
+
+  <header class="site-header">
+    <div class="site-header__bar">
+      <a class="logo" href="./" aria-label="Emanuel Cabrera, ir al inicio" data-i18n-aria="logo_label">EC</a>
+      <div class="header-actions">
+        <div class="lang-toggle" role="group" aria-label="Idioma" data-i18n-aria="lang_label">
+          <button class="lang-toggle__btn" type="button" lang="es" data-lang="es" aria-pressed="true">ES</button>
+          <span class="lang-toggle__sep" aria-hidden="true">/</span>
+          <button class="lang-toggle__btn" type="button" lang="en" data-lang="en" aria-pressed="false">EN</button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main id="contenido" tabindex="-1">
+    <section class="hero hero--404" aria-labelledby="nf-title">
+      <div class="hero__glow" aria-hidden="true"></div>
+      <div class="hero__floor" aria-hidden="true">
+        <picture>
+          <source media="(min-width: 48em)" srcset="assets/img/grid-floor-hero.svg" width="10920" height="394">
+          <img src="assets/img/grid-floor-hero-mobile.svg" alt="" width="3640" height="634" decoding="async">
+        </picture>
+      </div>
+      <div class="hero__vignette" aria-hidden="true"></div>
+
+      <div class="container hero__inner">
+        <div class="hero__sky">
+          <p class="hero__name" aria-hidden="true"><span class="hero__line">404</span></p>
+        </div>
+        <div class="hero__reflection" aria-hidden="true">
+          <div class="hero__mirror"><span class="hero__line">404</span></div>
+        </div>
+
+        <div class="hero__body">
+          <div class="hero__intro">
+            <h1 class="hero__role" id="nf-title" data-i18n="nf_title">Perdido más allá del horizonte.</h1>
+            <p class="hero__pitch" data-i18n="nf_text">Esta página no existe o cambió de lugar. El resto del portfolio sigue acá.</p>
+            <div class="hero__ctas">
+              <a class="btn btn--primary" href="./" data-i18n="nf_home">Volver al inicio</a>
+              <a class="btn btn--secondary" href="./#projects" data-i18n="cta_projects">Ver proyectos</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+</body>
+</html>

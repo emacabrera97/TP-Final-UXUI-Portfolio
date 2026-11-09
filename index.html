@@ -37,9 +37,10 @@
   <!-- Marca que JS está disponible antes del primer render (evita parpadeo del menú) -->
   <script>document.documentElement.classList.replace("no-js", "js");</script>
   <script src="js/main.js" defer></script>
+  <script src="js/i18n.js" defer></script>
 </head>
-<body>
-  <a class="skip-link" href="#contenido">Saltar al contenido</a>
+<body data-page="home">
+  <a class="skip-link" href="#contenido" data-i18n="skip">Saltar al contenido</a>
 
   <header class="site-header">
     <div class="site-header__bar">
