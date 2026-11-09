@@ -1,0 +1,209 @@
+<!doctype html>
+<html lang="es" class="no-js">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Caso de estudio: rediseño de la app de la biblioteca · Emanuel Cabrera</title>
+  <meta name="description" content="Caso de estudio UX/UI de Emanuel Cabrera: cómo reservar un libro pasó de siete a tres pasos. Problema, proceso, solución, resultado y aprendizajes.">
+  <meta name="author" content="Emanuel Cabrera">
+  <meta name="theme-color" content="#12082B">
+  <link rel="canonical" href="https://emacabrera97.github.io/TP-Final-UXUI-Portfolio/caso-estudio.html">
+
+  <meta property="og:type" content="article">
+  <meta property="og:locale" content="es_AR">
+  <meta property="og:site_name" content="Emanuel Cabrera · Portfolio">
+  <meta property="og:title" content="Caso de estudio: rediseño de la app de la biblioteca">
+  <meta property="og:description" content="Entrevistas, mapa del recorrido, prototipo en Figma y test de usabilidad: reservar un libro pasó de siete a tres pasos.">
+  <meta property="og:url" content="https://emacabrera97.github.io/TP-Final-UXUI-Portfolio/caso-estudio.html">
+  <meta property="og:image" content="https://emacabrera97.github.io/TP-Final-UXUI-Portfolio/assets/img/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Emanuel Cabrera escrito sobre un horizonte con grilla en perspectiva magenta.">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+
+  <link rel="preload" href="assets/fonts/unbounded-latin-800.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/archivo-latin-var.woff2" as="font" type="font/woff2" crossorigin>
+
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/case.css">
+
+  <script>document.documentElement.classList.replace("no-js", "js");</script>
+  <script src="js/main.js" defer></script>
+</head>
+<body class="case-page">
+  <a class="skip-link" href="#contenido" data-i18n="skip">Saltar al contenido</a>
+
+  <header class="site-header">
+    <div class="site-header__bar">
+      <a class="back-link" href="index.html#projects">
+        <span class="icon icon--arrow-left" aria-hidden="true"></span>
+        <span><span class="visually-hidden" data-i18n="back_to">Volver a </span><span data-i18n="nav_projects">Proyectos</span></span>
+      </a>
+      <div class="header-actions">
+        <div class="lang-toggle" role="group" aria-label="Idioma" data-i18n-aria="lang_label">
+          <button class="lang-toggle__btn" type="button" lang="es" data-lang="es" aria-pressed="true">ES</button>
+          <span class="lang-toggle__sep" aria-hidden="true">/</span>
+          <button class="lang-toggle__btn" type="button" lang="en" data-lang="en" aria-pressed="false">EN</button>
+        </div>
+        <a class="logo case-logo" href="index.html" aria-label="Emanuel Cabrera, ir al inicio" data-i18n-aria="logo_label">EC</a>
+      </div>
+    </div>
+  </header>
+
+  <main id="contenido" tabindex="-1">
+    <article>
+      <header class="case-hero container">
+        <p class="case-hero__meta"><time datetime="2026">2026</time> · UX/UI · <span data-i18n="case_study">Caso de estudio</span></p>
+        <h1 class="case-hero__title" data-i18n="p1_title">Rediseño de la app de la biblioteca</h1>
+        <p class="case-hero__lead" data-i18n="case_lead">Encontrar y reservar un libro llevaba siete pasos. Entrevisté a estudiantes, rediseñé el flujo en Figma y lo validé con un test de usabilidad.</p>
+      </header>
+
+      <div class="container">
+        <dl class="case-facts">
+          <div>
+            <dt data-i18n="fact_role">Rol</dt>
+            <dd data-i18n="fact_role_v">Diseño UX/UI (individual)</dd>
+          </div>
+          <div>
+            <dt data-i18n="fact_duration">Duración</dt>
+            <dd data-i18n="fact_duration_v">6 semanas</dd>
+          </div>
+          <div>
+            <dt data-i18n="tools_label">Herramientas</dt>
+            <dd>Figma · Maze · FigJam</dd>
+          </div>
+          <div>
+            <dt data-i18n="fact_team">Equipo</dt>
+            <dd data-i18n="fact_team_v">Proyecto individual, materia UX-UI</dd>
+          </div>
+        </dl>
+
+        <figure class="case-mockup">
+          <picture>
+            <source media="(min-width: 48em)"
+              srcset="assets/img/case-biblioteca.webp 1120w, assets/img/case-biblioteca@2x.webp 2240w"
+              sizes="(min-width: 80em) 1120px, calc(100vw - 5rem)" width="1120" height="560">
+            <img
+              src="assets/img/case-biblioteca-mobile.webp"
+              srcset="assets/img/case-biblioteca-mobile.webp 335w, assets/img/case-biblioteca-mobile@2x.webp 670w"
+              sizes="calc(100vw - 2.5rem)" width="335" height="300" decoding="async" fetchpriority="high"
+              alt="Antes y después: a la izquierda, el menú original con siete opciones apiladas; a la derecha, la nueva lista con buscador, disponibilidad visible y menú inferior de tres destinos."
+              data-i18n-alt="case_mockup_alt">
+          </picture>
+          <figcaption class="visually-hidden" data-i18n="case_caption">Antes: 7 pasos · Después: 3 pasos. Mockup ilustrativo.</figcaption>
+        </figure>
+
+        <section class="case-section" aria-labelledby="problema">
+          <h2 id="problema" data-i18n="case_problem">El problema</h2>
+          <div class="case-section__body">
+            <p class="case-text-lg" data-i18n="case_problem_text">Reservar un libro en la app de la biblioteca de la facultad requería pasar por siete pantallas, con menús que repetían opciones. En la observación inicial, 6 de 10 estudiantes abandonaban antes de terminar.</p>
+          </div>
+        </section>
+
+        <section class="case-section" aria-labelledby="proceso">
+          <h2 id="proceso" data-i18n="case_process">Proceso</h2>
+          <div class="case-section__body">
+            <ol class="rule-list case-steps" role="list">
+              <li>
+                <h3 data-i18n="step1_title">1 · Entrevistas</h3>
+                <p data-i18n="step1_text">5 estudiantes de distintos años. Lo que más repetían: “no sé dónde está mi reserva” y “no sé si el libro está disponible”.</p>
+              </li>
+              <li>
+                <h3 data-i18n="step2_title">2 · Mapa del recorrido</h3>
+                <p data-i18n="step2_text">El flujo mezclaba catálogo, cuenta y reglamento en un mismo menú. Tres pasos eran redundantes.</p>
+              </li>
+              <li>
+                <h3 data-i18n="step3_title">3 · Prototipo y test</h3>
+                <p data-i18n="step3_text">Prototipo en Figma probado con 5 personas. Tareas: “reservá un libro” y “encontrá tu reserva activa”.</p>
+              </li>
+            </ol>
+          </div>
+        </section>
+
+        <section class="case-section" aria-labelledby="solucion">
+          <h2 id="solucion" data-i18n="case_solution">Solución</h2>
+          <div class="case-section__body">
+            <p class="case-text-lg" data-i18n="case_solution_text">Un menú inferior con tres destinos (Catálogo, Reservas, Cuenta), búsqueda siempre visible y la disponibilidad dentro de cada resultado. Reservar pasó de siete a tres pasos.</p>
+            <dl class="case-compare">
+              <div>
+                <dt data-i18n="before">Antes</dt>
+                <dd data-i18n="before_text">Menú con 7 opciones, disponibilidad solo en el detalle.</dd>
+              </div>
+              <div>
+                <dt data-i18n="after">Después</dt>
+                <dd data-i18n="after_text">3 destinos, disponibilidad en la lista, reserva en 3 pasos.</dd>
+              </div>
+            </dl>
+          </div>
+        </section>
+
+        <section class="case-section" aria-labelledby="resultado">
+          <h2 id="resultado" data-i18n="result">Resultado</h2>
+          <div class="case-section__body">
+            <dl class="case-readout">
+              <div class="metric">
+                <dt data-i18n="r1_label">tareas completadas</dt>
+                <dd>38% → 91%</dd>
+              </div>
+              <div class="metric">
+                <dt data-i18n="r2_label">pasos para reservar</dt>
+                <dd>7 → 3</dd>
+              </div>
+              <div class="metric">
+                <dt data-i18n="r3_label">participantes encontraron su reserva</dt>
+                <dd data-i18n="r3_value">5 de 5</dd>
+              </div>
+            </dl>
+            <p class="case-note" data-i18n="case_note">Valores ilustrativos del trabajo práctico [placeholder: reemplazar por los resultados reales del test].</p>
+          </div>
+        </section>
+
+        <section class="case-section" aria-labelledby="aprendizajes">
+          <h2 id="aprendizajes" data-i18n="case_learnings">Aprendizajes</h2>
+          <div class="case-section__body">
+            <ul class="rule-list case-steps" role="list">
+              <li>
+                <h3 data-i18n="l1_title">Medir antes de rediseñar</h3>
+                <p data-i18n="l1_text">Sin los datos de la observación inicial no habría podido demostrar la mejora.</p>
+              </li>
+              <li>
+                <h3 data-i18n="l2_title">Menos opciones, más claridad</h3>
+                <p data-i18n="l2_text">Reducir el menú ayudó más que cualquier cambio visual.</p>
+              </li>
+              <li>
+                <h3 data-i18n="l3_title">Qué haría distinto</h3>
+                <p data-i18n="l3_text">Probar con estudiantes que usan lector de pantalla desde la primera iteración.</p>
+              </li>
+            </ul>
+          </div>
+        </section>
+      </div>
+    </article>
+
+    <nav class="container case-next" aria-label="Siguiente proyecto" data-i18n-aria="next_project">
+      <a class="case-next__link" href="index.html#projects">
+        <span class="case-next__text">
+          <span class="case-next__label" data-i18n="next_project">Siguiente proyecto</span>
+          <span class="case-next__title" data-i18n="p2_title">Sistema de diseño para una tienda online</span>
+        </span>
+        <span class="icon icon--arrow-36" aria-hidden="true"></span>
+      </a>
+    </nav>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container case-footer">
+      <p class="site-footer__copy">© <span data-year>2026</span> Emanuel Cabrera</p>
+      <a class="case-footer__back" href="index.html#projects">
+        <span data-i18n="back_projects">Volver a proyectos</span>
+        <span class="icon icon--arrow" aria-hidden="true"></span>
+      </a>
+    </div>
+  </footer>
+</body>
+</html>

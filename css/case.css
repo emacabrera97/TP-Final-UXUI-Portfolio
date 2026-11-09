@@ -1,0 +1,354 @@
+/* ==========================================================================
+   Página de caso de estudio (página "04 Caso de estudio" de Figma)
+   Problema → proceso → solución → resultado → aprendizajes
+   ========================================================================== */
+
+/* Header: volver a proyectos · idioma · iniciales */
+.back-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.625rem;
+  min-height: 2.75rem;
+  font-weight: 700;
+  font-size: var(--fs-emphasis);
+  line-height: var(--lh-emphasis);
+  transition: color var(--dur-fast) var(--ease-out);
+}
+
+.back-link:hover {
+  color: var(--cyan);
+}
+
+.back-link:active {
+  color: var(--amber);
+}
+
+.case-page .header-actions {
+  gap: var(--space-20);
+}
+
+.case-logo {
+  display: none;
+}
+
+@media (min-width: 48em) {
+  .case-logo {
+    display: inline-block;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   Título
+   -------------------------------------------------------------------------- */
+.case-hero {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-16);
+  padding-block: var(--space-40) var(--space-32);
+}
+
+.case-hero__meta {
+  color: var(--text-muted);
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  font-weight: 500;
+}
+
+.case-hero__title {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: clamp(2.125rem, 6.25vw, 5rem); /* 34 → 80 */
+  line-height: 1.1;
+  letter-spacing: -0.01em;
+  max-width: 70rem;
+}
+
+.case-hero__lead {
+  max-width: 47.5rem;
+  color: var(--text-muted);
+  font-size: var(--fs-large);
+  line-height: var(--lh-large);
+}
+
+/* --------------------------------------------------------------------------
+   Ficha: rol, duración, herramientas, equipo
+   -------------------------------------------------------------------------- */
+.case-facts {
+  display: grid;
+  margin: 0;
+  border-top: var(--hairline);
+  border-bottom: var(--hairline);
+}
+
+.case-facts > div {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+  padding: var(--space-20) var(--space-16) var(--space-20) 0;
+}
+
+.case-facts > div + div {
+  border-top: var(--hairline);
+}
+
+.case-facts dt {
+  color: var(--text-muted);
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  font-weight: 500;
+}
+
+.case-facts dd {
+  font-weight: 700;
+  font-size: var(--fs-emphasis);
+  line-height: var(--lh-emphasis);
+}
+
+/* --------------------------------------------------------------------------
+   Mockup principal
+   -------------------------------------------------------------------------- */
+.case-mockup {
+  margin-block: var(--space-40) var(--space-8);
+}
+
+.case-mockup img {
+  width: 100%;
+  border-radius: var(--radius);
+  background: var(--bg-raised);
+}
+
+.case-mockup figcaption {
+  margin-top: var(--space-12);
+  color: var(--text-muted);
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+}
+
+/* --------------------------------------------------------------------------
+   Secciones: H2 a la izquierda (280) y contenido a la derecha
+   -------------------------------------------------------------------------- */
+.case-section {
+  display: grid;
+  gap: var(--space-20);
+  padding-top: var(--space-48);
+}
+
+.case-section h2 {
+  font-size: var(--fs-h3);
+  line-height: var(--lh-h3);
+  font-weight: 700;
+}
+
+.case-section__body {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-20);
+  min-width: 0;
+}
+
+.case-text-lg {
+  font-size: var(--fs-large);
+  line-height: var(--lh-large);
+}
+
+.case-steps h3 {
+  font-size: 1.125rem;
+  line-height: 1.5rem;
+}
+
+.case-compare {
+  margin: 0;
+  border-bottom: var(--hairline);
+}
+
+.case-compare > div {
+  display: grid;
+  gap: var(--space-4);
+  padding-block: 0.875rem;
+  border-top: var(--hairline);
+}
+
+.case-compare dt {
+  color: var(--text-muted);
+  font-weight: 700;
+}
+
+.case-compare > div + div dt {
+  color: var(--magenta);
+}
+
+.case-readout {
+  display: grid;
+  margin: 0;
+  border-bottom: var(--hairline);
+}
+
+.case-readout .metric {
+  padding-block: var(--space-16);
+  border-top: var(--hairline);
+}
+
+.case-readout .metric dd {
+  font-size: 1.875rem;
+  line-height: 2.25rem;
+}
+
+.case-note {
+  color: var(--text-muted);
+  font-size: 0.9375rem;
+}
+
+/* --------------------------------------------------------------------------
+   Siguiente proyecto y footer
+   -------------------------------------------------------------------------- */
+.case-next {
+  padding-block: var(--space-56, 3.5rem);
+}
+
+.case-next__link {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-24);
+  padding-block: var(--space-24);
+  border-top: var(--hairline);
+  border-bottom: var(--hairline);
+  transition: color var(--dur-fast) var(--ease-out);
+}
+
+.case-next__text {
+  display: flex;
+  flex-direction: column;
+  gap: 0.375rem;
+}
+
+.case-next__label {
+  color: var(--text-muted);
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  font-weight: 500;
+}
+
+.case-next__title {
+  font-size: var(--fs-h3-featured);
+  line-height: var(--lh-h3-featured);
+  font-weight: 700;
+}
+
+.case-next__link .icon {
+  width: 1.5rem;
+  height: 1.5rem;
+  transition: transform var(--dur-med) var(--ease-out);
+}
+
+.case-next__link:hover {
+  color: var(--cyan);
+}
+
+.case-next__link:hover .icon {
+  transform: translate(4px, -4px);
+}
+
+.case-next__link:active {
+  color: var(--amber);
+}
+
+.case-footer {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-12);
+  padding-block: 1.75rem;
+}
+
+.case-footer__back {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-8);
+  font-weight: 700;
+  font-size: var(--fs-emphasis);
+  transition: color var(--dur-fast) var(--ease-out);
+}
+
+.case-footer__back:hover {
+  color: var(--cyan);
+}
+
+.case-footer__back:active {
+  color: var(--amber);
+}
+
+/* --------------------------------------------------------------------------
+   Tablet y desktop
+   -------------------------------------------------------------------------- */
+@media (min-width: 48em) {
+  .case-hero {
+    gap: var(--space-24);
+    padding-block: var(--space-96) var(--space-64);
+  }
+
+  .case-facts {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+
+  .case-facts > div + div {
+    border-top: 0;
+    border-left: var(--hairline);
+    padding-left: var(--space-24);
+  }
+
+  .case-mockup {
+    margin-block: var(--space-64) var(--space-24);
+  }
+
+  .case-section {
+    grid-template-columns: minmax(0, 17.5rem) minmax(0, 1fr);
+    gap: var(--space-48);
+    padding-top: var(--space-72);
+  }
+
+  .case-section h2 {
+    font-size: 1.375rem;
+    line-height: 1.75rem;
+  }
+
+  .case-compare > div {
+    grid-template-columns: 6.25rem minmax(0, 1fr);
+    gap: var(--space-24);
+  }
+
+  .case-readout {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    border-bottom: 0;
+  }
+
+  .case-readout .metric {
+    padding: 0 var(--space-16) 0 var(--space-24);
+    border-top: 0;
+    border-left: var(--hairline);
+  }
+
+  .case-readout .metric:first-child {
+    padding-left: 0;
+    border-left: 0;
+  }
+
+  .case-readout .metric dd {
+    font-size: var(--fs-metric);
+    line-height: var(--lh-metric);
+  }
+
+  .case-next {
+    padding-block: var(--space-96);
+  }
+
+  .case-next__link .icon {
+    width: 2.25rem;
+    height: 2.25rem;
+  }
+
+  .case-footer {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
