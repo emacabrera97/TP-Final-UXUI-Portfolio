@@ -17,7 +17,7 @@
     menu_write: "Email me",
     new_tab: "(opens in a new tab)",
     skip: "Skip to content",
-    logo_label: "Emanuel Cabrera, go to top",
+    logo_label: "EC, Emanuel Cabrera: go to top",
     nav_label: "Main",
     lang_label: "Language",
     footer_nav_label: "Footer",
