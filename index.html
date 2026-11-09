@@ -156,8 +156,110 @@
       </div>
     </section>
 
-    <section id="projects" aria-labelledby="projects-title">
-      <h2 id="projects-title">Proyectos</h2>
+    <section class="section projects" id="projects" aria-labelledby="projects-title">
+      <div class="container">
+        <div class="section-head projects__head">
+          <h2 class="section-title" id="projects-title" data-i18n="projects_title">Proyectos</h2>
+          <p class="section-intro" data-i18n="projects_intro">Tres trabajos de la facultad, contados como casos de estudio: problema, proceso, solución y resultado.</p>
+        </div>
+
+        <div class="project-grid">
+          <!-- Proyecto destacado: tiene caso de estudio desarrollado (caso-estudio.html) -->
+          <article class="project-card project-card--featured">
+            <div class="project-card__media">
+              <img
+                src="assets/img/mock-biblioteca.webp"
+                srcset="assets/img/mock-biblioteca.webp 662w, assets/img/mock-biblioteca@2x.webp 1324w"
+                sizes="(min-width: 64em) 662px, (min-width: 48em) 50vw, 100vw"
+                width="662" height="651" loading="lazy" decoding="async"
+                alt="Mockup ilustrativo de la app de la biblioteca: lista de libros con buscador y pantalla de detalle con el botón Reservar."
+                data-i18n-alt="p1_alt">
+            </div>
+            <div class="project-card__body">
+              <p class="project-card__meta"><time datetime="2026">2026</time> · UX/UI · <span data-i18n="case_study">Caso de estudio</span></p>
+              <h3 class="project-card__title" data-i18n="p1_title">Rediseño de la app de la biblioteca</h3>
+              <p class="project-card__desc" data-i18n="p1_desc">Encontrar y reservar un libro llevaba demasiados pasos. Entrevisté a estudiantes, rediseñé el flujo en Figma y lo validé con un test de usabilidad.</p>
+              <p class="project-card__result">
+                <span class="project-card__result-label" data-i18n="result">Resultado</span>
+                <strong data-i18n="p1_result">38% → 91% de tareas completadas</strong>
+              </p>
+              <ul class="tags" aria-label="Herramientas" data-i18n-aria="tools_label">
+                <li>Figma</li>
+                <li data-i18n="tag_interviews">Entrevistas</li>
+                <li data-i18n="tag_usability">Test de usabilidad</li>
+              </ul>
+              <a class="link-text project-card__link" href="caso-estudio.html">
+                <span data-i18n="read_case">Leer caso de estudio</span>
+                <span class="icon icon--arrow-18" aria-hidden="true"></span>
+              </a>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div class="project-card__media">
+              <img
+                src="assets/img/mock-design-system.webp"
+                srcset="assets/img/mock-design-system.webp 430w, assets/img/mock-design-system@2x.webp 860w"
+                sizes="(min-width: 64em) 430px, (min-width: 48em) 50vw, 100vw"
+                width="430" height="220" loading="lazy" decoding="async"
+                alt="Mockup ilustrativo del sistema de diseño: muestras de color, especimen tipográfico Aa y tres variantes de botón."
+                data-i18n-alt="p2_alt">
+            </div>
+            <div class="project-card__body">
+              <p class="project-card__meta"><time datetime="2025">2025</time> · UI</p>
+              <h3 class="project-card__title" data-i18n="p2_title">Sistema de diseño para una tienda online</h3>
+              <p class="project-card__desc" data-i18n="p2_desc">Paleta, escala tipográfica y 12 componentes documentados.</p>
+              <p class="project-card__result">
+                <span class="project-card__result-label" data-i18n="learning">Aprendizaje</span>
+                <strong data-i18n="p2_result">Nombrar los tokens por su rol, no por su color</strong>
+              </p>
+              <ul class="tags" aria-label="Herramientas" data-i18n-aria="tools_label">
+                <li>Figma</li>
+                <li data-i18n="tag_variables">Variables</li>
+                <li data-i18n="tag_components">Componentes</li>
+              </ul>
+              <!-- [placeholder] reemplazar por el link al archivo de Figma de este proyecto -->
+              <a class="link-text project-card__link" href="https://www.figma.com/design/xDbdNZ00ZAdd3r0RkGvOVZ/Portfolio-Web---Synthwave--TP-Final-UX-UI-?node-id=0-1" target="_blank" rel="noopener noreferrer">
+                <span data-i18n="view_figma">Ver en Figma</span>
+                <span class="icon icon--arrow-18" aria-hidden="true"></span>
+                <span class="visually-hidden" data-i18n="new_tab">(se abre en una pestaña nueva)</span>
+              </a>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div class="project-card__media">
+              <img
+                src="assets/img/mock-landing.webp"
+                srcset="assets/img/mock-landing.webp 430w, assets/img/mock-landing@2x.webp 860w"
+                sizes="(min-width: 64em) 430px, (min-width: 48em) 50vw, 100vw"
+                width="430" height="220" loading="lazy" decoding="async"
+                alt="Mockup ilustrativo de una landing en el navegador con puntajes de Lighthouse mobile: 98, 100, 100 y 100."
+                data-i18n-alt="p3_alt">
+            </div>
+            <div class="project-card__body">
+              <p class="project-card__meta"><time datetime="2025">2025</time> · Front-end</p>
+              <h3 class="project-card__title" data-i18n="p3_title">Landing accesible en HTML y CSS</h3>
+              <p class="project-card__desc" data-i18n="p3_desc">Maquetación semántica, mobile-first y navegable con teclado.</p>
+              <p class="project-card__result">
+                <span class="project-card__result-label" data-i18n="result">Resultado</span>
+                <strong data-i18n="p3_result">Lighthouse mobile 98–100 en las 4 métricas</strong>
+              </p>
+              <ul class="tags" aria-label="Herramientas" data-i18n-aria="tools_label">
+                <li>HTML5</li>
+                <li>CSS3</li>
+                <li>Git</li>
+              </ul>
+              <!-- [placeholder] reemplazar por la URL de la demo publicada -->
+              <a class="link-text project-card__link" href="https://github.com/emacabrera97" target="_blank" rel="noopener noreferrer">
+                <span data-i18n="view_demo">Ver demo</span>
+                <span class="icon icon--arrow-18" aria-hidden="true"></span>
+                <span class="visually-hidden" data-i18n="new_tab">(se abre en una pestaña nueva)</span>
+              </a>
+            </div>
+          </article>
+        </div>
+      </div>
     </section>
 
     <section id="skills" aria-labelledby="skills-title">
