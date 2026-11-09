@@ -1,0 +1,291 @@
+/* ==========================================================================
+   Header (sticky) y navegación
+   Mobile: logo · idioma · botón de menú (44×44) → panel a pantalla completa
+   Desktop (1024+): logo · anclas centradas · idioma · GitHub · CTA Contacto
+   ========================================================================== */
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: var(--bg-base);
+  border-bottom: var(--hairline);
+}
+
+.site-header__bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-16);
+  height: calc(var(--header-h) - 1px);
+  padding-inline: var(--page-margin);
+  max-width: calc(var(--content-max) + 2 * var(--page-margin));
+  margin-inline: auto;
+}
+
+.logo {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 1.25rem;
+  line-height: 1.5rem;
+  letter-spacing: -0.02em;
+  color: var(--magenta);
+  padding-block: var(--space-8);
+  transition: color var(--dur-fast) var(--ease-out);
+}
+
+.logo:hover {
+  color: var(--cyan);
+}
+
+.logo:active {
+  color: var(--amber);
+}
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: var(--space-16);
+}
+
+.header-github,
+.header-cta {
+  display: none;
+}
+
+/* Link de navegación: default → hover cian con subrayado → activo magenta */
+.nav-link {
+  position: relative;
+  display: inline-block;
+  transition: color var(--dur-fast) var(--ease-out);
+}
+
+.nav-link:hover {
+  color: var(--cyan);
+}
+
+.nav-link:active {
+  color: var(--amber);
+}
+
+.nav-link[aria-current="true"] {
+  color: var(--magenta);
+}
+
+/* --------------------------------------------------------------------------
+   Botón de menú (solo mobile/tablet)
+   -------------------------------------------------------------------------- */
+.menu-toggle {
+  display: inline-grid;
+  place-items: center;
+  width: 2.75rem;
+  height: 2.75rem;
+  border: 1.5px solid var(--line);
+  border-radius: var(--radius);
+  color: var(--text);
+  transition: border-color var(--dur-fast) var(--ease-out), color var(--dur-fast) var(--ease-out);
+}
+
+.menu-toggle:hover {
+  border-color: var(--cyan);
+  color: var(--cyan);
+}
+
+.menu-toggle:active {
+  border-color: var(--amber);
+  color: var(--amber);
+}
+
+.menu-toggle[aria-expanded="true"] .icon {
+  --icon: url("../assets/icons/close.svg");
+}
+
+/* --------------------------------------------------------------------------
+   Panel de navegación mobile
+   Sin JS el panel queda visible como lista (mejora progresiva).
+   -------------------------------------------------------------------------- */
+.nav-panel {
+  display: flex;
+  flex-direction: column;
+}
+
+.nav-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+@media (max-width: 63.99em) {
+  .site-nav {
+    order: 3;
+  }
+
+  .js .nav-panel {
+    position: fixed;
+    inset: var(--header-h) 0 0 0;
+    z-index: 40;
+    overflow-y: auto;
+    padding: var(--space-24) var(--page-margin) 0;
+    background: var(--bg-base);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-0.5rem);
+    transition:
+      opacity var(--dur-med) var(--ease-out),
+      transform var(--dur-med) var(--ease-out),
+      visibility 0s linear var(--dur-med);
+  }
+
+  .js .nav-panel.is-open {
+    opacity: 1;
+    visibility: visible;
+    transform: none;
+    transition:
+      opacity var(--dur-med) var(--ease-out),
+      transform var(--dur-med) var(--ease-out),
+      visibility 0s;
+  }
+
+  .nav-list .nav-link {
+    display: block;
+    padding-block: 1.125rem;
+    border-bottom: var(--hairline);
+    font-family: var(--font-display);
+    font-weight: 800;
+    font-size: 1.625rem;
+    line-height: 2rem;
+  }
+
+  .nav-panel__actions {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-12);
+    padding-block: var(--space-24) var(--space-40);
+  }
+
+  /* Cierre del menú: luz del horizonte (110) + grilla (150) anclados abajo */
+  .nav-panel__horizon {
+    position: relative;
+    flex: none;
+    height: 16.25rem;
+    margin: auto calc(-1 * var(--page-margin)) 0;
+    padding-top: var(--space-40);
+    overflow: hidden;
+    background: linear-gradient(to bottom, rgb(255 181 71 / 0) 0, rgb(255 181 71 / 0.45) 110px, transparent 110px);
+  }
+
+  .nav-panel__horizon::before {
+    content: "";
+    position: absolute;
+    top: 109px;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: var(--amber);
+    z-index: 1;
+  }
+
+  .nav-panel__horizon img {
+    position: absolute;
+    top: 110px;
+    left: 50%;
+    width: 3640px;
+    max-width: none;
+    height: 151px;
+    transform: translateX(-50%);
+  }
+
+  /* Sin JS: el panel se muestra como lista estática bajo el header */
+  .no-js .site-header__bar {
+    flex-wrap: wrap;
+    height: auto;
+    padding-block: var(--space-8);
+  }
+
+  .no-js .site-nav {
+    width: 100%;
+  }
+
+  .no-js .nav-panel__actions,
+  .no-js .nav-panel__horizon,
+  .no-js .menu-toggle {
+    display: none;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   Desktop: navegación en línea, sin botón de menú
+   -------------------------------------------------------------------------- */
+@media (min-width: 64em) {
+  .site-header__bar {
+    gap: var(--space-24);
+  }
+
+  .site-nav {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+  }
+
+  .nav-list {
+    display: flex;
+    gap: clamp(1.5rem, 2.8vw, 2.25rem);
+  }
+
+  .nav-link {
+    padding-block: 0.375rem;
+    font-size: var(--fs-label);
+    line-height: var(--lh-label);
+    font-weight: 500;
+  }
+
+  .nav-link::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 2px;
+    background: currentColor;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform var(--dur-med) var(--ease-out);
+  }
+
+  .nav-link:hover::after,
+  .nav-link[aria-current="true"]::after {
+    transform: scaleX(1);
+  }
+
+  .nav-panel__actions,
+  .nav-panel__horizon,
+  .menu-toggle {
+    display: none;
+  }
+
+  .header-actions {
+    gap: var(--space-24);
+  }
+
+  .header-github {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.375rem;
+    padding-block: var(--space-8);
+    font-weight: 500;
+    font-size: var(--fs-label);
+    transition: color var(--dur-fast) var(--ease-out);
+  }
+
+  .header-github:hover {
+    color: var(--cyan);
+  }
+
+  .header-github:active {
+    color: var(--amber);
+  }
+
+  .header-cta {
+    display: inline-flex;
+  }
+}

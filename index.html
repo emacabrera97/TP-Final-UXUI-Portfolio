@@ -31,21 +31,62 @@
   <link rel="stylesheet" href="css/tokens.css">
   <link rel="stylesheet" href="css/base.css">
   <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/layout.css">
+
+  <!-- Marca que JS está disponible antes del primer render (evita parpadeo del menú) -->
+  <script>document.documentElement.classList.replace("no-js", "js");</script>
+  <script src="js/main.js" defer></script>
 </head>
 <body>
   <a class="skip-link" href="#contenido">Saltar al contenido</a>
 
   <header class="site-header">
-    <a class="logo" href="#inicio" aria-label="Emanuel Cabrera, ir al inicio">EC</a>
-    <nav aria-label="Principal">
-      <ul>
-        <li><a href="#projects">Proyectos</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#experience">Recorrido</a></li>
-        <li><a href="#about">Sobre mí</a></li>
-        <li><a href="#contact">Contacto</a></li>
-      </ul>
-    </nav>
+    <div class="site-header__bar">
+      <a class="logo" href="#inicio" aria-label="Emanuel Cabrera, ir al inicio" data-i18n-aria="logo_label">EC</a>
+
+      <nav class="site-nav" aria-label="Principal" data-i18n-aria="nav_label">
+        <div class="nav-panel" id="menu">
+          <ul class="nav-list" role="list">
+            <li><a class="nav-link" href="#projects" data-i18n="nav_projects">Proyectos</a></li>
+            <li><a class="nav-link" href="#skills" data-i18n="nav_skills">Skills</a></li>
+            <li><a class="nav-link" href="#experience" data-i18n="nav_experience">Recorrido</a></li>
+            <li><a class="nav-link" href="#about" data-i18n="nav_about">Sobre mí</a></li>
+            <li><a class="nav-link" href="#contact" data-i18n="nav_contact">Contacto</a></li>
+          </ul>
+
+          <div class="nav-panel__actions">
+            <a class="btn btn--primary btn--block" href="mailto:emanuelncabrera97@gmail.com" data-i18n="menu_write">Escribime</a>
+            <a class="btn btn--secondary btn--block" href="https://github.com/emacabrera97" target="_blank" rel="noopener noreferrer">
+              GitHub <span class="icon icon--arrow" aria-hidden="true"></span>
+              <span class="visually-hidden" data-i18n="new_tab">(se abre en una pestaña nueva)</span>
+            </a>
+          </div>
+
+          <div class="nav-panel__horizon" aria-hidden="true">
+            <img src="assets/img/grid-floor-menu.svg" alt="" width="3640" height="151" loading="lazy" decoding="async">
+          </div>
+        </div>
+      </nav>
+
+      <div class="header-actions">
+        <div class="lang-toggle" role="group" aria-label="Idioma" data-i18n-aria="lang_label">
+          <button class="lang-toggle__btn" type="button" lang="es" data-lang="es" aria-pressed="true">ES</button>
+          <span class="lang-toggle__sep" aria-hidden="true">/</span>
+          <button class="lang-toggle__btn" type="button" lang="en" data-lang="en" aria-pressed="false">EN</button>
+        </div>
+
+        <a class="header-github" href="https://github.com/emacabrera97" target="_blank" rel="noopener noreferrer">
+          GitHub <span class="icon icon--arrow" aria-hidden="true"></span>
+          <span class="visually-hidden" data-i18n="new_tab">(se abre en una pestaña nueva)</span>
+        </a>
+
+        <a class="btn btn--outline header-cta" href="#contact" data-i18n="nav_contact">Contacto</a>
+
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="menu" aria-label="Abrir menú" data-label-open="Abrir menú" data-label-close="Cerrar menú">
+          <span class="icon icon--menu" aria-hidden="true"></span>
+        </button>
+      </div>
+    </div>
   </header>
 
   <main id="contenido" tabindex="-1">
