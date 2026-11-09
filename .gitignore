@@ -1,0 +1,13 @@
+# Herramientas locales del editor / asistentes
+.claude/
+.impeccable/
+
+# Dependencias y artefactos locales
+node_modules/
+*.log
+.DS_Store
+Thumbs.db
+
+# Reportes locales de Lighthouse (la captura final va en docs/)
+lighthouse-*.html
+lighthouse-*.json

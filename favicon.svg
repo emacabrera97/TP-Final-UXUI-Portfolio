@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64">
+  <rect width="64" height="64" rx="8" fill="#12082B"/>
+  <rect x="0" y="45" width="64" height="2" fill="#FFB547"/>
+  <path d="M10 47 L0 64 M22 47 L16 64 M32 47 V64 M42 47 L48 64 M54 47 L64 64 M0 55 H64" stroke="#FF2E93" stroke-opacity=".6" stroke-width="1.5"/>
+  <text x="32" y="38" text-anchor="middle" font-family="Arial Black, Arial, sans-serif" font-weight="900" font-size="26" fill="#FF2E93">EC</text>
+</svg>
