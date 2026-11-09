@@ -347,17 +347,103 @@
       </div>
     </section>
 
-    <section id="about" aria-labelledby="about-title">
-      <h2 id="about-title">Sobre mí</h2>
+    <section class="section about" id="about" aria-labelledby="about-title">
+      <div class="container about__grid">
+        <figure class="about__portrait">
+          <!-- [placeholder] reemplazar por una foto real en WebP (440×540) con alt "Retrato de Emanuel Cabrera" -->
+          <img src="assets/img/retrato-ilustracion.svg" width="440" height="540" loading="lazy" decoding="async"
+            alt="Ilustración con las iniciales EC sobre un sol synthwave que se pone en un horizonte de grilla magenta."
+            data-i18n-alt="about_alt">
+        </figure>
+
+        <div class="about__text">
+          <h2 class="section-title" id="about-title" data-i18n="nav_about">Sobre mí</h2>
+          <p class="about__bio" data-i18n="about_bio">Estudio Sistemas de Información y me especializo en la parte que toca a las personas: la interfaz. Me gusta que lo que construyo se entienda rápido, se pueda usar sin mouse y cargue en cualquier conexión.</p>
+
+          <ul class="rule-list principles" role="list" aria-label="Principios de trabajo" data-i18n-aria="principles_title">
+            <li>
+              <h3 data-i18n="pr1_title">Claridad antes que adorno</h3>
+              <p data-i18n="pr1_desc">Cada pantalla responde una pregunta del usuario.</p>
+            </li>
+            <li>
+              <h3 data-i18n="pr2_title">Accesible desde el primer commit</h3>
+              <p data-i18n="pr2_desc">Teclado, contraste y foco se diseñan, no se agregan al final.</p>
+            </li>
+            <li>
+              <h3 data-i18n="pr3_title">Probar con personas</h3>
+              <p data-i18n="pr3_desc">Las decisiones se validan con tests, no con opiniones.</p>
+            </li>
+          </ul>
+        </div>
+      </div>
     </section>
 
-    <section id="contact" aria-labelledby="contact-title">
-      <h2 id="contact-title">Hablemos.</h2>
+    <section class="contact" id="contact" aria-labelledby="contact-title">
+      <div class="container contact__content">
+        <h2 class="contact__title" id="contact-title" data-i18n="contact_title">Hablemos.</h2>
+        <p class="contact__lead" data-i18n="contact_lead">¿Tenés una búsqueda o un proyecto? Te respondo en menos de 48 horas.</p>
+        <a class="contact__email" href="mailto:emanuelncabrera97@gmail.com">
+          <span>emanuelncabrera97<wbr>@gmail.com</span>
+          <span class="icon icon--arrow-28" aria-hidden="true"></span>
+        </a>
+        <ul class="contact__social" role="list">
+          <li>
+            <!-- [placeholder] reemplazar por la URL del perfil de LinkedIn -->
+            <a class="link-social" href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer">
+              LinkedIn <span class="icon icon--arrow" aria-hidden="true"></span>
+              <span class="visually-hidden" data-i18n="new_tab">(se abre en una pestaña nueva)</span>
+            </a>
+          </li>
+          <li>
+            <a class="link-social" href="https://github.com/emacabrera97" target="_blank" rel="noopener noreferrer">
+              GitHub <span class="icon icon--arrow" aria-hidden="true"></span>
+              <span class="visually-hidden" data-i18n="new_tab">(se abre en una pestaña nueva)</span>
+            </a>
+          </li>
+          <li>
+            <!-- [placeholder] reemplazar por la URL del perfil de Behance -->
+            <a class="link-social" href="https://www.behance.net/" target="_blank" rel="noopener noreferrer">
+              Behance <span class="icon icon--arrow" aria-hidden="true"></span>
+              <span class="visually-hidden" data-i18n="new_tab">(se abre en una pestaña nueva)</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Cierre con horizonte: luz, sol y grilla (decorativo) -->
+      <div class="contact__horizon" aria-hidden="true">
+        <img class="contact__sun" src="assets/img/sun.svg" alt="" width="400" height="200" loading="lazy" decoding="async">
+        <div class="contact__floor">
+          <picture>
+            <source media="(min-width: 48em)" srcset="assets/img/grid-floor-contact.svg" width="10920" height="171">
+            <img src="assets/img/grid-floor-menu.svg" alt="" width="3640" height="151" loading="lazy" decoding="async">
+          </picture>
+        </div>
+      </div>
     </section>
   </main>
 
   <footer class="site-footer">
-    <p>© 2026 Emanuel Cabrera</p>
+    <div class="container site-footer__inner">
+      <p class="site-footer__copy">© <span data-year>2026</span> Emanuel Cabrera</p>
+
+      <nav class="site-footer__nav" aria-label="Pie de página" data-i18n-aria="footer_nav_label">
+        <ul role="list">
+          <li><a href="#projects" data-i18n="nav_projects">Proyectos</a></li>
+          <li><a href="#skills" data-i18n="nav_skills">Skills</a></li>
+          <li><a href="#experience" data-i18n="nav_experience">Recorrido</a></li>
+          <li><a href="#about" data-i18n="nav_about">Sobre mí</a></li>
+          <li><a href="#contact" data-i18n="nav_contact">Contacto</a></li>
+        </ul>
+      </nav>
+
+      <ul class="site-footer__social" role="list" aria-label="Redes" data-i18n-aria="social_label">
+        <li><a href="https://github.com/emacabrera97" target="_blank" rel="noopener noreferrer">GitHub<span class="visually-hidden" data-i18n="new_tab">(se abre en una pestaña nueva)</span></a></li>
+        <li><a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer">LinkedIn<span class="visually-hidden" data-i18n="new_tab">(se abre en una pestaña nueva)</span></a></li>
+      </ul>
+
+      <p class="site-footer__credit" data-i18n="footer_credit">Hecho con HTML y CSS · Diseñado en Figma</p>
+    </div>
   </footer>
 </body>
 </html>

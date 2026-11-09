@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="440" height="540" viewBox="0 0 440 540" role="img">
+  <defs>
+    <linearGradient id="sun" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#FFB547"/>
+      <stop offset=".5" stop-color="#FF2E93"/>
+      <stop offset="1" stop-color="#7B2FF7"/>
+    </linearGradient>
+    <linearGradient id="glow" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#FFB547" stop-opacity="0"/>
+      <stop offset=".7" stop-color="#FF2E93" stop-opacity=".18"/>
+      <stop offset="1" stop-color="#FFB547" stop-opacity=".5"/>
+    </linearGradient>
+    <pattern id="grid" width="24" height="24" patternUnits="userSpaceOnUse">
+      <path d="M24 0V24M0 24H24" stroke="#FF2E93" stroke-opacity=".12" fill="none"/>
+    </pattern>
+    <clipPath id="sky"><rect width="440" height="330"/></clipPath>
+  </defs>
+  <rect width="440" height="540" fill="#2A1858"/>
+  <rect width="440" height="540" fill="url(#grid)"/>
+  <rect y="210" width="440" height="120" fill="url(#glow)"/>
+  <!-- Sol con franjas -->
+  <g clip-path="url(#sky)">
+    <circle cx="220" cy="330" r="150" fill="url(#sun)"/>
+    <g fill="#2A1858">
+      <rect y="250" width="440" height="5"/>
+      <rect y="272" width="440" height="7"/>
+      <rect y="296" width="440" height="9"/>
+      <rect y="318" width="440" height="11"/>
+    </g>
+  </g>
+  <rect y="329" width="440" height="2" fill="#FFB547"/>
+  <!-- Piso en perspectiva -->
+  <g stroke="#FF2E93" stroke-opacity=".55" fill="none">
+    <path d="M220 331L-380 540M220 331L-180 540M220 331L20 540M220 331V540M220 331L420 540M220 331L620 540M220 331L820 540"/>
+    <path d="M0 338H440M0 350H440M0 368H440M0 393H440M0 425H440M0 466H440M0 516H440"/>
+  </g>
+  <!-- Monograma -->
+  <text x="220" y="190" text-anchor="middle" font-family="Unbounded, 'Arial Black', Arial, sans-serif" font-weight="800" font-size="112" fill="#F5ECFF" letter-spacing="4">EC</text>
+</svg>

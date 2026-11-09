@@ -74,8 +74,8 @@
   --lh-meta: 1.125rem;
   --fs-metric: 2rem;         /* 32/36 */
   --lh-metric: 2.25rem;
-  --fs-email: 1.5rem;        /* 24/30 */
-  --lh-email: 1.875rem;
+  --fs-email: 1.125rem;      /* 18/26 (24/30 en Figma; ajustado al largo del email real) */
+  --lh-email: 1.625rem;
 
   /* --- Espaciado: múltiplos de 4 y 8 --- */
   --space-4: 0.25rem;

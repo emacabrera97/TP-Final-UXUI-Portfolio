@@ -1,0 +1,15 @@
+<svg preserveAspectRatio="none" overflow="visible" style="display: block;" width="400" height="200" viewBox="0 0 400 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="Sol (decorativo)" clip-path="url(#clip0_0_45)">
+<circle id="Ellipse" cx="200" cy="200" r="180" fill="url(#paint0_linear_0_45)"/>
+</g>
+<defs>
+<linearGradient id="paint0_linear_0_45" x1="200" y1="20" x2="200" y2="380" gradientUnits="userSpaceOnUse">
+<stop stop-color="#FFB547"/>
+<stop offset="0.5" stop-color="#FF2E93"/>
+<stop offset="1" stop-color="#7B2FF7"/>
+</linearGradient>
+<clipPath id="clip0_0_45">
+<rect width="400" height="200" fill="white"/>
+</clipPath>
+</defs>
+</svg>
