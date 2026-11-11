@@ -169,13 +169,10 @@
 }
 
 .case-compare dt {
-  color: var(--text-muted);
+  color: var(--magenta);
   font-weight: 700;
 }
 
-.case-compare > div + div dt {
-  color: var(--magenta);
-}
 
 .case-readout {
   display: grid;
@@ -351,4 +348,13 @@
     align-items: center;
     justify-content: space-between;
   }
+}
+
+.case-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-8) var(--space-24);
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }

@@ -115,13 +115,20 @@ Pasos para configurarlo (una sola vez):
 
 Para probarlo en local, cualquier servidor estático alcanza, por ejemplo `npx serve .` o `python -m http.server`. La 404 usa rutas absolutas `/TP-Final-UXUI-Portfolio/…` porque GitHub Pages la sirve en cualquier ruta inexistente.
 
+## Proyectos del portfolio
+
+Son trabajos reales de la asignatura, todos en GitHub:
+- [Cubrí Seguros](https://github.com/emacabrera97/TP5-UXUI) ([sitio](https://emacabrera97.github.io/TP5-UXUI/)): checkout de contratación de un seguro de celular. Es el caso de estudio desarrollado del portfolio.
+- [Coffea](https://github.com/emacabrera97/coffea-landing): landing page en HTML y CSS.
+- [20 ejercicios de HTML y CSS](https://github.com/emacabrera97/TP3-UXUI) con una landing integradora.
+
+Los resultados del caso de estudio son datos concretos del trabajo (pasos, planes, bonus). No hay métricas de uso real ni test con usuarios, y la página lo aclara.
+
 ## Contenido a completar
 
-Siguiendo la consigna (contenido real, o ficticio pero verosímil), estos datos todavía son ilustrativos y están marcados en el código con `[placeholder]`:
+- Año del curso CS50P y su certificado o proyecto final (marcados `[completar]` en *Recorrido*).
 - Foto real para *Sobre mí* (por ahora hay una ilustración).
-- Link de Figma del sistema de diseño y demo de la landing.
-- Institución del curso y organización del voluntariado.
-- Resultados del test del caso de estudio (38% → 91%, etc.).
+- Link de demo de Coffea, si se publica.
 
 ## Créditos y recursos
 

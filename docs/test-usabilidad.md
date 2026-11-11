@@ -18,7 +18,7 @@ Leé cada una por separado y empezá el cronómetro cuando la persona empiece a 
 | # | Tarea (lo que le decís) | Éxito si… |
 |---|---|---|
 | 1 | “Encontrá el email para escribirle a esta persona.” | Llega al email o al mailto |
-| 2 | “Abrí el proyecto más reciente.” | Abre el caso de estudio de la biblioteca (2026) |
+| 2 | “Abrí el proyecto más reciente.” | Abre el caso de estudio de Cubrí Seguros (2026) |
 | 3 | “¿En qué herramientas trabaja?” | Encuentra la sección Skills |
 | 4 | “¿Está disponible para una pasantía?” | Lee el badge de disponibilidad del inicio |
 

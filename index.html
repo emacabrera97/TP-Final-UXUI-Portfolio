@@ -136,20 +136,20 @@
             <h2 class="visually-hidden" id="metricas" data-i18n="metrics_title">Highlights en números</h2>
             <dl class="metrics" aria-labelledby="metricas">
               <div class="metric">
-                <dt data-i18n="metric_cases">casos de estudio</dt>
+                <dt data-i18n="metric_cases">proyectos de UX/UI</dt>
                 <dd>3</dd>
               </div>
               <div class="metric">
-                <dt data-i18n="metric_years">años de carrera</dt>
-                <dd>2</dd>
+                <dt data-i18n="metric_years">curso completado (CS50P)</dt>
+                <dd>1</dd>
               </div>
               <div class="metric">
-                <dt data-i18n="metric_tools">herramientas</dt>
-                <dd>12</dd>
-              </div>
-              <div class="metric">
-                <dt data-i18n="metric_courses">cursos</dt>
+                <dt data-i18n="metric_tools">lenguajes</dt>
                 <dd>5</dd>
+              </div>
+              <div class="metric">
+                <dt data-i18n="metric_courses">repos en GitHub</dt>
+                <dd>6</dd>
               </div>
             </dl>
           </div>
@@ -161,7 +161,7 @@
       <div class="container">
         <div class="section-head projects__head">
           <h2 class="section-title" id="projects-title" data-i18n="projects_title">Proyectos</h2>
-          <p class="section-intro" data-i18n="projects_intro">Tres trabajos de la facultad, contados como casos de estudio: problema, proceso, solución y resultado.</p>
+          <p class="section-intro" data-i18n="projects_intro">Tres trabajos de la facultad. El primero, contado como caso de estudio: problema, proceso, solución y resultado.</p>
         </div>
 
         <div class="project-grid">
@@ -169,25 +169,25 @@
           <article class="project-card project-card--featured">
             <div class="project-card__media">
               <img
-                src="assets/img/mock-biblioteca.webp"
-                srcset="assets/img/mock-biblioteca.webp 662w, assets/img/mock-biblioteca@2x.webp 1324w"
+                src="assets/img/mock-cubri.webp"
+                srcset="assets/img/mock-cubri.webp 662w, assets/img/mock-cubri@2x.webp 1324w"
                 sizes="(min-width: 64em) 662px, (min-width: 48em) 50vw, 100vw"
                 width="662" height="651" loading="lazy" decoding="async"
-                alt="Mockup ilustrativo de la app de la biblioteca: lista de libros con buscador y pantalla de detalle con el botón Reservar."
+                alt="Capturas mobile de Cubrí Seguros: la pantalla Elegí tu plan con tres planes y la pantalla de pago con tarjeta."
                 data-i18n-alt="p1_alt">
             </div>
             <div class="project-card__body">
               <p class="project-card__meta"><time datetime="2026">2026</time> · UX/UI · <span data-i18n="case_study">Caso de estudio</span></p>
-              <h3 class="project-card__title" data-i18n="p1_title">Rediseño de la app de la biblioteca</h3>
-              <p class="project-card__desc" data-i18n="p1_desc">Encontrar y reservar un libro llevaba demasiados pasos. Entrevisté a estudiantes, rediseñé el flujo en Figma y lo validé con un test de usabilidad.</p>
+              <h3 class="project-card__title" data-i18n="p1_title">Cubrí Seguros: contratación digital de un seguro de celular</h3>
+              <p class="project-card__desc" data-i18n="p1_desc">Un checkout de cuatro pasos (cotizar, elegir plan, cargar datos y pagar) implementado a partir del diseño de Figma de la cátedra.</p>
               <p class="project-card__result">
                 <span class="project-card__result-label" data-i18n="result">Resultado</span>
-                <strong data-i18n="p1_result">38% → 91% de tareas completadas</strong>
+                <strong data-i18n="p1_result">Flujo completo con validaciones y progreso guardado</strong>
               </p>
               <ul class="tags" aria-label="Herramientas" data-i18n-aria="tools_label">
-                <li>Figma</li>
-                <li data-i18n="tag_interviews">Entrevistas</li>
-                <li data-i18n="tag_usability">Test de usabilidad</li>
+                <li>HTML5</li>
+                <li>Tailwind CSS</li>
+                <li>JavaScript</li>
               </ul>
               <a class="link-text project-card__link" href="caso-estudio.html">
                 <span data-i18n="read_case">Leer caso de estudio</span>
@@ -199,29 +199,28 @@
           <article class="project-card">
             <div class="project-card__media">
               <img
-                src="assets/img/mock-design-system.webp"
-                srcset="assets/img/mock-design-system.webp 430w, assets/img/mock-design-system@2x.webp 860w"
+                src="assets/img/mock-coffea.webp"
+                srcset="assets/img/mock-coffea.webp 430w, assets/img/mock-coffea@2x.webp 860w"
                 sizes="(min-width: 64em) 430px, (min-width: 48em) 50vw, 100vw"
                 width="430" height="220" loading="lazy" decoding="async"
-                alt="Mockup ilustrativo del sistema de diseño: muestras de color, especimen tipográfico Aa y tres variantes de botón."
+                alt="Portada de la landing de Coffea: una taza de café con granos y el título ¡Servimos el café más rico de la ciudad!"
                 data-i18n-alt="p2_alt">
             </div>
             <div class="project-card__body">
-              <p class="project-card__meta"><time datetime="2025">2025</time> · UI</p>
-              <h3 class="project-card__title" data-i18n="p2_title">Sistema de diseño para una tienda online</h3>
-              <p class="project-card__desc" data-i18n="p2_desc">Paleta, escala tipográfica y 12 componentes documentados.</p>
+              <p class="project-card__meta"><time datetime="2026">2026</time> · Front-end</p>
+              <h3 class="project-card__title" data-i18n="p2_title">Coffea: landing page en HTML y CSS</h3>
+              <p class="project-card__desc" data-i18n="p2_desc">Landing de una cafetería ficticia con carrusel, menú móvil y favoritos resueltos sin JavaScript.</p>
               <p class="project-card__result">
-                <span class="project-card__result-label" data-i18n="learning">Aprendizaje</span>
-                <strong data-i18n="p2_result">Nombrar los tokens por su rol, no por su color</strong>
+                <span class="project-card__result-label" data-i18n="result">Resultado</span>
+                <strong data-i18n="p2_result">Solo HTML y CSS, con tokens y capas de CSS</strong>
               </p>
               <ul class="tags" aria-label="Herramientas" data-i18n-aria="tools_label">
-                <li>Figma</li>
-                <li data-i18n="tag_variables">Variables</li>
-                <li data-i18n="tag_components">Componentes</li>
+                <li>HTML5</li>
+                <li>CSS3</li>
+                <li>Git</li>
               </ul>
-              <!-- [placeholder] reemplazar por el link al archivo de Figma de este proyecto -->
-              <a class="link-text project-card__link" href="https://www.figma.com/design/xDbdNZ00ZAdd3r0RkGvOVZ/Portfolio-Web---Synthwave--TP-Final-UX-UI-?node-id=0-1" target="_blank" rel="noopener noreferrer">
-                <span data-i18n="view_figma">Ver en Figma</span>
+              <a class="link-text project-card__link" href="https://github.com/emacabrera97/coffea-landing" target="_blank" rel="noopener noreferrer">
+                <span data-i18n="view_repo">Ver repositorio</span>
                 <span class="icon icon--arrow-18" aria-hidden="true"></span>
                 <span class="visually-hidden" data-i18n="new_tab">(se abre en una pestaña nueva)</span>
               </a>
@@ -231,29 +230,28 @@
           <article class="project-card">
             <div class="project-card__media">
               <img
-                src="assets/img/mock-landing.webp"
-                srcset="assets/img/mock-landing.webp 430w, assets/img/mock-landing@2x.webp 860w"
+                src="assets/img/mock-tp3.webp"
+                srcset="assets/img/mock-tp3.webp 430w, assets/img/mock-tp3@2x.webp 860w"
                 sizes="(min-width: 64em) 430px, (min-width: 48em) 50vw, 100vw"
                 width="430" height="220" loading="lazy" decoding="async"
-                alt="Mockup ilustrativo de una landing en el navegador con puntajes de Lighthouse mobile: 98, 100, 100 y 100."
+                alt="Landing integradora Mi Negocio: portada con el título Hacemos crecer tu negocio y un botón Contactanos."
                 data-i18n-alt="p3_alt">
             </div>
             <div class="project-card__body">
-              <p class="project-card__meta"><time datetime="2025">2025</time> · Front-end</p>
-              <h3 class="project-card__title" data-i18n="p3_title">Landing accesible en HTML y CSS</h3>
-              <p class="project-card__desc" data-i18n="p3_desc">Maquetación semántica, mobile-first y navegable con teclado.</p>
+              <p class="project-card__meta"><time datetime="2026">2026</time> · Front-end</p>
+              <h3 class="project-card__title" data-i18n="p3_title">20 ejercicios de HTML y CSS</h3>
+              <p class="project-card__desc" data-i18n="p3_desc">De la estructura HTML básica a flexbox, posicionamiento y animaciones con @keyframes, hasta una landing integradora.</p>
               <p class="project-card__result">
                 <span class="project-card__result-label" data-i18n="result">Resultado</span>
-                <strong data-i18n="p3_result">Lighthouse mobile 98–100 en las 4 métricas</strong>
+                <strong data-i18n="p3_result">Una landing integradora con todo lo practicado</strong>
               </p>
               <ul class="tags" aria-label="Herramientas" data-i18n-aria="tools_label">
                 <li>HTML5</li>
                 <li>CSS3</li>
                 <li>Git</li>
               </ul>
-              <!-- [placeholder] reemplazar por la URL de la demo publicada -->
-              <a class="link-text project-card__link" href="https://github.com/emacabrera97" target="_blank" rel="noopener noreferrer">
-                <span data-i18n="view_demo">Ver demo</span>
+              <a class="link-text project-card__link" href="https://github.com/emacabrera97/TP3-UXUI" target="_blank" rel="noopener noreferrer">
+                <span data-i18n="view_repo">Ver repositorio</span>
                 <span class="icon icon--arrow-18" aria-hidden="true"></span>
                 <span class="visually-hidden" data-i18n="new_tab">(se abre en una pestaña nueva)</span>
               </a>
@@ -273,9 +271,9 @@
         <ul class="skill-list" role="list">
           <li class="skill-row">
             <h3 class="skill-row__title" data-i18n="s1_title">Diseño UX</h3>
-            <p class="skill-row__desc" data-i18n="s1_desc">Entrevistas, mapas de recorrido, wireframes y tests de usabilidad.</p>
+            <p class="skill-row__desc" data-i18n="s1_desc">Arquitectura de información, wireframes y prototipos.</p>
             <ul class="tags skill-row__tools" aria-label="Herramientas" data-i18n-aria="tools_label">
-              <li>Figma</li><li>Maze</li><li>FigJam</li>
+              <li>Figma</li>
             </ul>
           </li>
           <li class="skill-row">
@@ -289,14 +287,14 @@
             <h3 class="skill-row__title">Front-end</h3>
             <p class="skill-row__desc" data-i18n="s3_desc">HTML semántico, CSS responsive y accesibilidad WCAG 2.2 AA.</p>
             <ul class="tags skill-row__tools" aria-label="Herramientas" data-i18n-aria="tools_label">
-              <li>HTML5</li><li>CSS3</li><li>JavaScript</li>
+              <li>HTML5</li><li>CSS3</li><li>JavaScript</li><li>Tailwind CSS</li>
             </ul>
           </li>
           <li class="skill-row">
             <h3 class="skill-row__title" data-i18n="s4_title">Flujo de trabajo</h3>
-            <p class="skill-row__desc" data-i18n="s4_desc">Versionado, revisión y publicación continua.</p>
+            <p class="skill-row__desc" data-i18n="s4_desc">Versionado, publicación continua y los lenguajes de la facultad.</p>
             <ul class="tags skill-row__tools" aria-label="Herramientas" data-i18n-aria="tools_label">
-              <li>Git</li><li>GitHub</li><li>GitHub Pages</li><li>Lighthouse</li>
+              <li>Git</li><li>GitHub</li><li>GitHub Pages</li><li>Python</li><li>Java</li>
             </ul>
           </li>
         </ul>
@@ -307,41 +305,41 @@
       <div class="container">
         <div class="section-head">
           <h2 class="section-title" id="experience-title" data-i18n="nav_experience">Recorrido</h2>
-          <p class="section-intro" data-i18n="experience_intro">Formación, cursos y voluntariado.</p>
+          <p class="section-intro" data-i18n="experience_intro">Formación y cursos.</p>
         </div>
 
         <ol class="timeline" role="list">
           <li class="timeline__item">
-            <p class="timeline__period"><span><time datetime="2024">2024</time> — <span data-i18n="today">hoy</span></span></p>
+            <p class="timeline__period"><span data-i18n="ongoing">En curso</span></p>
             <div class="timeline__role">
               <h3 data-i18n="t1_role">Lic. en Sistemas de Información</h3>
               <p>Facultad de Ciencia y Tecnología · UADER</p>
             </div>
             <ul class="timeline__wins" role="list">
-              <li data-i18n="t1_a">Diseño UX-UI 2026: portfolio con proceso completo, de la investigación al deploy</li>
-              <li data-i18n="t1_b">Trabajos de UX/UI presentados como casos de estudio</li>
+              <li data-i18n="t1_a">Materias de programación: Algoritmos y Estructuras de Datos, y Programación Orientada a Objetos</li>
+              <li data-i18n="t1_b">Diseño UX-UI 2026: tres trabajos prácticos publicados en GitHub</li>
             </ul>
           </li>
           <li class="timeline__item">
-            <p class="timeline__period"><time datetime="2025">2025</time></p>
+            <p class="timeline__period"><span data-i18n="t2_period">[completar año]</span></p>
             <div class="timeline__role">
-              <h3 data-i18n="t2_role">Curso de diseño UX/UI</h3>
-              <p data-i18n="t2_org">Plataforma [placeholder]</p>
+              <h3 data-i18n="t2_role">CS50P: Introducción a la programación con Python</h3>
+              <p data-i18n="t2_org">CS50 · Universidad de Harvard</p>
             </div>
             <ul class="timeline__wins" role="list">
-              <li data-i18n="t2_a">Dos proyectos finales aprobados</li>
-              <li data-i18n="t2_b">Primer sistema de diseño en Figma</li>
+              <li data-i18n="t2_a">Curso completo de programación con Python</li>
+              <li data-i18n="t2_b">[completar: certificado o proyecto final]</li>
             </ul>
           </li>
           <li class="timeline__item">
-            <p class="timeline__period"><time datetime="2025">2025</time></p>
+            <p class="timeline__period"><time datetime="2026">2026</time></p>
             <div class="timeline__role">
-              <h3 data-i18n="t3_role">Voluntariado: sitio para una ONG</h3>
-              <p data-i18n="t3_org">Organización [placeholder]</p>
+              <h3 data-i18n="t3_role">Proyectos de la asignatura UX/UI</h3>
+              <p data-i18n="t3_org">FCyT · UADER</p>
             </div>
             <ul class="timeline__wins" role="list">
-              <li data-i18n="t3_a">Maquetación responsive del sitio institucional</li>
-              <li data-i18n="t3_b">Publicado y mantenido en GitHub Pages</li>
+              <li data-i18n="t3_a">Cubrí Seguros: checkout con validaciones y estado persistente</li>
+              <li data-i18n="t3_b">Coffea: landing en HTML y CSS sin JavaScript</li>
             </ul>
           </li>
         </ol>

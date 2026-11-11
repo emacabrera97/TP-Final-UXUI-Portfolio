@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Caso de estudio: rediseño de la app de la biblioteca · Emanuel Cabrera</title>
-  <meta name="description" content="Caso de estudio UX/UI de Emanuel Cabrera: cómo reservar un libro pasó de siete a tres pasos. Problema, proceso, solución, resultado y aprendizajes.">
+  <title>Caso de estudio: Cubrí Seguros, contratación digital de un seguro de celular · Emanuel Cabrera</title>
+  <meta name="description" content="Caso de estudio de Emanuel Cabrera: un checkout de cuatro pasos para contratar un seguro de celular, con validaciones y progreso guardado. Problema, proceso, solución, resultado y aprendizajes.">
   <meta name="author" content="Emanuel Cabrera">
   <meta name="theme-color" content="#12082B">
   <link rel="canonical" href="https://emacabrera97.github.io/TP-Final-UXUI-Portfolio/caso-estudio.html">
@@ -12,8 +12,8 @@
   <meta property="og:type" content="article">
   <meta property="og:locale" content="es_AR">
   <meta property="og:site_name" content="Emanuel Cabrera · Portfolio">
-  <meta property="og:title" content="Caso de estudio: rediseño de la app de la biblioteca">
-  <meta property="og:description" content="Entrevistas, mapa del recorrido, prototipo en Figma y test de usabilidad: reservar un libro pasó de siete a tres pasos.">
+  <meta property="og:title" content="Caso de estudio: Cubrí Seguros, contratación digital de un seguro de celular">
+  <meta property="og:description" content="Cotizar, elegir plan, cargar datos y pagar: un checkout de cuatro pasos con validaciones, hecho a partir de un diseño de Figma.">
   <meta property="og:url" content="https://emacabrera97.github.io/TP-Final-UXUI-Portfolio/caso-estudio.html">
   <meta property="og:image" content="https://emacabrera97.github.io/TP-Final-UXUI-Portfolio/assets/img/og-image.png">
   <meta property="og:image:width" content="1200">
@@ -60,49 +60,49 @@
     <article>
       <header class="case-hero container">
         <p class="case-hero__meta"><time datetime="2026">2026</time> · UX/UI · <span data-i18n="case_study">Caso de estudio</span></p>
-        <h1 class="case-hero__title" data-i18n="p1_title">Rediseño de la app de la biblioteca</h1>
-        <p class="case-hero__lead" data-i18n="case_lead">Encontrar y reservar un libro llevaba siete pasos. Entrevisté a estudiantes, rediseñé el flujo en Figma y lo validé con un test de usabilidad.</p>
+        <h1 class="case-hero__title" data-i18n="p1_title">Cubrí Seguros: contratación digital de un seguro de celular</h1>
+        <p class="case-hero__lead" data-i18n="case_lead">Un checkout de cuatro pasos (cotizar, elegir plan, cargar datos y pagar) implementado a partir del diseño de Figma de la cátedra.</p>
       </header>
 
       <div class="container">
         <dl class="case-facts">
           <div>
             <dt data-i18n="fact_role">Rol</dt>
-            <dd data-i18n="fact_role_v">Diseño UX/UI (individual)</dd>
+            <dd data-i18n="fact_role_v">Desarrollo front-end sobre un diseño provisto</dd>
           </div>
           <div>
-            <dt data-i18n="fact_duration">Duración</dt>
-            <dd data-i18n="fact_duration_v">6 semanas</dd>
+            <dt data-i18n="fact_duration">Contexto</dt>
+            <dd data-i18n="fact_duration_v">TP5 de Diseño UX-UI 2026 · FCyT-UADER</dd>
           </div>
           <div>
             <dt data-i18n="tools_label">Herramientas</dt>
-            <dd>Figma · Maze · FigJam</dd>
+            <dd>HTML5 · Tailwind CSS · Basecoat UI · JavaScript</dd>
           </div>
           <div>
             <dt data-i18n="fact_team">Equipo</dt>
-            <dd data-i18n="fact_team_v">Proyecto individual, materia UX-UI</dd>
+            <dd data-i18n="fact_team_v">Proyecto individual</dd>
           </div>
         </dl>
 
         <figure class="case-mockup">
           <picture>
             <source media="(min-width: 48em)"
-              srcset="assets/img/case-biblioteca.webp 1120w, assets/img/case-biblioteca@2x.webp 2240w"
+              srcset="assets/img/case-cubri.webp 1120w, assets/img/case-cubri@2x.webp 2240w"
               sizes="(min-width: 80em) 1120px, calc(100vw - 5rem)" width="1120" height="560">
             <img
-              src="assets/img/case-biblioteca-mobile.webp"
-              srcset="assets/img/case-biblioteca-mobile.webp 335w, assets/img/case-biblioteca-mobile@2x.webp 670w"
+              src="assets/img/case-cubri-mobile.webp"
+              srcset="assets/img/case-cubri-mobile.webp 335w, assets/img/case-cubri-mobile@2x.webp 670w"
               sizes="calc(100vw - 2.5rem)" width="335" height="300" decoding="async" fetchpriority="high"
-              alt="Antes y después: a la izquierda, el menú original con siete opciones apiladas; a la derecha, la nueva lista con buscador, disponibilidad visible y menú inferior de tres destinos."
+              alt="Cubrí Seguros: pantallas Elegí tu plan y Pago. Tres planes (Básico, Plus recomendado y Premium) con su cuota mensual, y el formulario de pago con tarjeta."
               data-i18n-alt="case_mockup_alt">
           </picture>
-          <figcaption class="visually-hidden" data-i18n="case_caption">Antes: 7 pasos · Después: 3 pasos. Mockup ilustrativo.</figcaption>
+          <figcaption data-i18n="case_caption">Pantalla “Elegí tu plan” (en mobile, junto a la de pago).</figcaption>
         </figure>
 
         <section class="case-section" aria-labelledby="problema">
           <h2 id="problema" data-i18n="case_problem">El problema</h2>
           <div class="case-section__body">
-            <p class="case-text-lg" data-i18n="case_problem_text">Reservar un libro en la app de la biblioteca de la facultad requería pasar por siete pantallas, con menús que repetían opciones. En la observación inicial, 6 de 10 estudiantes abandonaban antes de terminar.</p>
+            <p class="case-text-lg" data-i18n="case_problem_text">El trabajo práctico pide implementar el flujo de contratación de un seguro de celular a partir de un diseño en Figma: cotizar, elegir un plan, cargar los datos, pagar y recibir el número de póliza. Es un trámite con dinero y datos personales, así que no admite confusión: cada paso tiene que decir qué falta, explicar los errores y evitar que se pague dos veces.</p>
           </div>
         </section>
 
@@ -111,16 +111,16 @@
           <div class="case-section__body">
             <ol class="rule-list case-steps" role="list">
               <li>
-                <h3 data-i18n="step1_title">1 · Entrevistas</h3>
-                <p data-i18n="step1_text">5 estudiantes de distintos años. Lo que más repetían: “no sé dónde está mi reserva” y “no sé si el libro está disponible”.</p>
+                <h3 data-i18n="step1_title">1 · Un único estado</h3>
+                <p data-i18n="step1_text">Toda la información del flujo vive en un solo objeto, y la pantalla solo muestra lo que dice ese estado. Por eso “Volver” nunca pierde los datos cargados.</p>
               </li>
               <li>
-                <h3 data-i18n="step2_title">2 · Mapa del recorrido</h3>
-                <p data-i18n="step2_text">El flujo mezclaba catálogo, cuenta y reglamento en un mismo menú. Tres pasos eran redundantes.</p>
+                <h3 data-i18n="step2_title">2 · Reglas de negocio y validaciones</h3>
+                <p data-i18n="step2_text">La cuota se calcula con el valor del equipo, la tasa anual del plan y un factor de antigüedad. Cada validación es una función pura que devuelve el mensaje de error o nada.</p>
               </li>
               <li>
-                <h3 data-i18n="step3_title">3 · Prototipo y test</h3>
-                <p data-i18n="step3_text">Prototipo en Figma probado con 5 personas. Tareas: “reservá un libro” y “encontrá tu reserva activa”.</p>
+                <h3 data-i18n="step3_title">3 · Casos de prueba</h3>
+                <p data-i18n="step3_text">Probé las cuotas con valores concretos y el pago con tarjetas de prueba: una aprobada, una rechazada y cualquier otra de 16 dígitos.</p>
               </li>
             </ol>
           </div>
@@ -129,15 +129,19 @@
         <section class="case-section" aria-labelledby="solucion">
           <h2 id="solucion" data-i18n="case_solution">Solución</h2>
           <div class="case-section__body">
-            <p class="case-text-lg" data-i18n="case_solution_text">Un menú inferior con tres destinos (Catálogo, Reservas, Cuenta), búsqueda siempre visible y la disponibilidad dentro de cada resultado. Reservar pasó de siete a tres pasos.</p>
+            <p class="case-text-lg" data-i18n="case_solution_text">Un solo flujo de pasos con el resumen siempre a la vista y tres decisiones pensadas para evitar errores.</p>
             <dl class="case-compare">
               <div>
-                <dt data-i18n="before">Antes</dt>
-                <dd data-i18n="before_text">Menú con 7 opciones, disponibilidad solo en el detalle.</dd>
+                <dt data-i18n="sol1_title">Botones</dt>
+                <dd data-i18n="sol1_text">Se habilitan con el paso válido y explican qué falta: “Falta completar: …”.</dd>
               </div>
               <div>
-                <dt data-i18n="after">Después</dt>
-                <dd data-i18n="after_text">3 destinos, disponibilidad en la lista, reserva en 3 pasos.</dd>
+                <dt data-i18n="sol2_title">Errores</dt>
+                <dd data-i18n="sol2_text">Aparecen al salir del campo; al avanzar, el foco va al primer campo inválido.</dd>
+              </div>
+              <div>
+                <dt data-i18n="sol3_title">Pago</dt>
+                <dd data-i18n="sol3_text">El botón pasa a “Procesando…” y se bloquea para evitar el doble pago.</dd>
               </div>
             </dl>
           </div>
@@ -148,19 +152,35 @@
           <div class="case-section__body">
             <dl class="case-readout">
               <div class="metric">
-                <dt data-i18n="r1_label">tareas completadas</dt>
-                <dd>38% → 91%</dd>
+                <dt data-i18n="r1_label">pasos de contratación</dt>
+                <dd>4</dd>
               </div>
               <div class="metric">
-                <dt data-i18n="r2_label">pasos para reservar</dt>
-                <dd>7 → 3</dd>
+                <dt data-i18n="r2_label">planes con cuota calculada</dt>
+                <dd>3</dd>
               </div>
               <div class="metric">
-                <dt data-i18n="r3_label">participantes encontraron su reserva</dt>
-                <dd data-i18n="r3_value">5 de 5</dd>
+                <dt data-i18n="r3_label">bonus: progreso guardado y máscaras de input</dt>
+                <dd>2</dd>
               </div>
             </dl>
-            <p class="case-note" data-i18n="case_note">Valores ilustrativos del trabajo práctico [placeholder: reemplazar por los resultados reales del test].</p>
+            <p class="case-note" data-i18n="case_note">Es un trabajo práctico: no hay métricas de uso real ni test con usuarios. El progreso se guarda sin el número de tarjeta, el vencimiento ni el CVV.</p>
+            <ul class="case-links" role="list">
+              <li>
+                <a class="link-text" href="https://emacabrera97.github.io/TP5-UXUI/" target="_blank" rel="noopener noreferrer">
+                  <span data-i18n="view_live">Ver el sitio publicado</span>
+                  <span class="icon icon--arrow-18" aria-hidden="true"></span>
+                  <span class="visually-hidden" data-i18n="new_tab">(se abre en una pestaña nueva)</span>
+                </a>
+              </li>
+              <li>
+                <a class="link-text" href="https://github.com/emacabrera97/TP5-UXUI" target="_blank" rel="noopener noreferrer">
+                  <span data-i18n="view_repo">Ver repositorio</span>
+                  <span class="icon icon--arrow-18" aria-hidden="true"></span>
+                  <span class="visually-hidden" data-i18n="new_tab">(se abre en una pestaña nueva)</span>
+                </a>
+              </li>
+            </ul>
           </div>
         </section>
 
@@ -169,16 +189,16 @@
           <div class="case-section__body">
             <ul class="rule-list case-steps" role="list">
               <li>
-                <h3 data-i18n="l1_title">Medir antes de rediseñar</h3>
-                <p data-i18n="l1_text">Sin los datos de la observación inicial no habría podido demostrar la mejora.</p>
+                <h3 data-i18n="l1_title">Una sola fuente de verdad</h3>
+                <p data-i18n="l1_text">Una única función calcula la cuota, así el precio de las tarjetas y el del resumen no pueden diferir.</p>
               </li>
               <li>
-                <h3 data-i18n="l2_title">Menos opciones, más claridad</h3>
-                <p data-i18n="l2_text">Reducir el menú ayudó más que cualquier cambio visual.</p>
+                <h3 data-i18n="l2_title">Explicar antes que bloquear</h3>
+                <p data-i18n="l2_text">Un botón deshabilitado sin explicación frustra; decir qué falta le ahorra un intento a la persona.</p>
               </li>
               <li>
-                <h3 data-i18n="l3_title">Qué haría distinto</h3>
-                <p data-i18n="l3_text">Probar con estudiantes que usan lector de pantalla desde la primera iteración.</p>
+                <h3 data-i18n="l3_title">Cuidar los datos sensibles</h3>
+                <p data-i18n="l3_text">El almacenamiento del navegador no está protegido, por eso nunca guarda los datos de la tarjeta.</p>
               </li>
             </ul>
           </div>
@@ -190,7 +210,7 @@
       <a class="case-next__link" href="index.html#projects">
         <span class="case-next__text">
           <span class="case-next__label" data-i18n="next_project">Siguiente proyecto</span>
-          <span class="case-next__title" data-i18n="p2_title">Sistema de diseño para una tienda online</span>
+          <span class="case-next__title" data-i18n="p2_title">Coffea: landing page en HTML y CSS</span>
         </span>
         <span class="icon icon--arrow-36" aria-hidden="true"></span>
       </a>
