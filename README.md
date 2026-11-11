@@ -42,7 +42,7 @@ One-page con navegación por anclas. Las 9 secciones de la consigna están prese
 5. **Skills** (`#skills`): 4 categorías con descripción y herramientas.
 6. **Recorrido** (`#experience`): timeline con período, rol, institución y 2 logros.
 7. **Sobre mí** (`#about`): presentación, ilustración con texto alternativo y 3 principios.
-8. **Contacto** (`#contact`): CTA, `mailto:`, LinkedIn, GitHub y Behance.
+8. **Contacto** (`#contact`): CTA, `mailto:`, LinkedIn y GitHub.
 9. **Footer**: copyright con año, navegación repetida, redes y crédito de tecnología.
 
 **Cambios de orden justificados:**
@@ -119,10 +119,9 @@ Para probarlo en local, cualquier servidor estático alcanza, por ejemplo `npx s
 
 Siguiendo la consigna (contenido real, o ficticio pero verosímil), estos datos todavía son ilustrativos y están marcados en el código con `[placeholder]`:
 - Foto real para *Sobre mí* (por ahora hay una ilustración).
-- URLs de LinkedIn y Behance, link de Figma del sistema de diseño y demo de la landing.
+- Link de Figma del sistema de diseño y demo de la landing.
 - Institución del curso y organización del voluntariado.
 - Resultados del test del caso de estudio (38% → 91%, etc.).
-- La ubicación del hero ("Buenos Aires") viene del Figma: confirmarla.
 
 ## Créditos y recursos
 
