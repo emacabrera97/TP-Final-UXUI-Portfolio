@@ -198,20 +198,21 @@
 <section class="slide" data-n="8">
   <p class="kicker">6 · Prototipo y sitio</p>
   <h2>Del prototipo en Figma al sitio</h2>
-  <p class="sub" style="margin-bottom:14px">Prototipo de alta fidelidad en desktop (1280) y mobile (375), con el menú mobile y el caso de estudio.</p>
-  <div class="grid c2" style="grid-template-columns: 1.3fr .7fr; align-items:start;">
-    <div><img class="shot" src="captura-desktop.webp" alt="Captura del sitio publicado: hero con el nombre sobre el horizonte"><p class="note">Sitio publicado, hero en 1280 px.</p></div>
-    <div class="card">
-      <h3>Decisiones implementadas</h3>
-      <ul style="font-size:16px">
-        <li>Los tokens del Figma son variables CSS con los mismos valores.</li>
-        <li>Menú mobile con <code>aria-expanded</code> y foco cian.</li>
-        <li>Hover en tarjetas: el mockup se eleva y el borde pasa a magenta.</li>
-        <li>Selector ES/EN, caso de estudio y 404.</li>
-      </ul>
-      <p class="note">Falta agregar acá la comparación lado a lado Figma / sitio de 2 secciones.</p>
+  <p class="sub" style="margin-bottom:12px">Mismo primer pantallazo en desktop (1280) y mobile (375): en cada par, a la izquierda el prototipo y a la derecha el sitio publicado.</p>
+  <div style="display:grid;grid-template-columns:1fr 1fr 160px 160px;gap:14px;align-items:start;flex:none;height:385px">
+    <div style="grid-column:1/3;display:grid;grid-template-columns:1fr 1fr;gap:14px">
+      <div><p class="note" style="margin:0 0 4px"><b>Figma · desktop</b></p><img class="shot" src="figma-hero-desktop.png" alt="Hero en Figma, versión desktop"></div>
+      <div><p class="note" style="margin:0 0 4px"><b>Sitio · desktop</b></p><img class="shot" src="captura-desktop.webp" alt="Hero del sitio publicado, versión desktop"></div>
     </div>
+    <div><p class="note" style="margin:0 0 4px"><b>Figma · mobile</b></p><img class="shot" style="height:345px;width:auto" src="figma-hero-mobile.png" alt="Hero en Figma, versión mobile"></div>
+    <div><p class="note" style="margin:0 0 4px"><b>Sitio · mobile</b></p><img class="shot" style="height:345px;width:auto" src="captura-mobile.webp" alt="Hero del sitio publicado, versión mobile"></div>
   </div>
+  <ul style="font-size:15px;margin-top:10px;columns:2;column-gap:40px">
+    <li>Los tokens del Figma son variables CSS con los mismos valores.</li>
+    <li>Menú mobile con <code>aria-expanded</code> y foco cian.</li>
+    <li>Hover en tarjetas: el mockup se eleva y el borde pasa a magenta.</li>
+    <li>Diferencia: el sitio usa “EC · Emanuel Cabrera” en lugar del texto de ejemplo.</li>
+  </ul>
 </section>
 
 <!-- 9. Test -->
