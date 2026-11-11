@@ -126,7 +126,7 @@ Los resultados del caso de estudio son datos concretos del trabajo (pasos, plane
 
 ## Contenido a completar
 
-- Año del curso CS50P y su certificado o proyecto final (marcados `[completar]` en *Recorrido*).
+- CS50P: cuando entregues el proyecto final, actualizar *Recorrido* con el certificado.
 - Foto real para *Sobre mí* (por ahora hay una ilustración).
 - Link de demo de Coffea, si se publica.
 
