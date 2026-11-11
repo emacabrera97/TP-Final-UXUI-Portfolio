@@ -5,7 +5,7 @@ Portfolio personal one-page de **Emanuel Cabrera**, front-end developer jr. con 
 | | |
 |---|---|
 | 🌐 **Sitio publicado** | https://emacabrera97.github.io/TP-Final-UXUI-Portfolio/ |
-| 🎨 **Figma** (design system, desktop, mobile, caso de estudio y prototipo) | [Portfolio Web · Synthwave](https://www.figma.com/design/xDbdNZ00ZAdd3r0RkGvOVZ/Portfolio-Web---Synthwave--TP-Final-UX-UI-?node-id=22-1504) |
+| 🎨 **Figma** (research, wireframes, design system, desktop, mobile, caso de estudio y prototipo) | [Portfolio Web · Synthwave](https://www.figma.com/design/xDbdNZ00ZAdd3r0RkGvOVZ/Portfolio-Web---Synthwave--TP-Final-UX-UI-?node-id=22-1504) |
 | 📁 **Repositorio** | https://github.com/emacabrera97/TP-Final-UXUI-Portfolio |
 
 ![Captura desktop del hero: el nombre Emanuel Cabrera cortado por el horizonte, sobre una grilla magenta](docs/captura-desktop.webp)
@@ -30,6 +30,17 @@ Portfolio personal one-page de **Emanuel Cabrera**, front-end developer jr. con 
 | Texto | `--text` `#F5ECFF` / `--text-muted` `#BBA9E0` | 16.7:1 / 9:1 |
 
 Tipografías (2 familias): **Unbounded ExtraBold** para el nombre, los títulos de sección y el menú; **Archivo** para todo lo demás. Radio de 4 px, filetes de 1 px, espaciado en múltiplos de 4 y 8 y grilla de 12 columnas con márgenes de 80 en desktop (4 columnas con márgenes de 20 en mobile).
+
+## Proceso de diseño
+
+| Etapa | Dónde está |
+|---|---|
+| Usuario objetivo, benchmark, moodboard y arquitectura de información | Figma → [00 Research](https://www.figma.com/design/xDbdNZ00ZAdd3r0RkGvOVZ/Portfolio-Web---Synthwave--TP-Final-UX-UI-?node-id=41-6) |
+| Wireframes de baja fidelidad (desktop, mobile y menú mobile) | Figma → [00 Wireframes](https://www.figma.com/design/xDbdNZ00ZAdd3r0RkGvOVZ/Portfolio-Web---Synthwave--TP-Final-UX-UI-?node-id=42-30) |
+| Design system (color, tipografía, espaciado, grilla y componentes) | Figma → [01 Design System](https://www.figma.com/design/xDbdNZ00ZAdd3r0RkGvOVZ/Portfolio-Web---Synthwave--TP-Final-UX-UI-?node-id=0-1) |
+| Prototipo de alta fidelidad (desktop, mobile, menú y caso de estudio) | Figma → [05 Prototipo](https://www.figma.com/design/xDbdNZ00ZAdd3r0RkGvOVZ/Portfolio-Web---Synthwave--TP-Final-UX-UI-?node-id=22-1504) |
+| Test de usabilidad (guion y planilla) | [`docs/test-usabilidad.md`](docs/test-usabilidad.md) |
+| Presentación del proceso (10 slides) | [`docs/proceso-ux-ui.pdf`](docs/proceso-ux-ui.pdf) |
 
 ## Arquitectura de información
 

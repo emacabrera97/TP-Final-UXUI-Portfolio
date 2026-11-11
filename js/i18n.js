@@ -149,7 +149,6 @@
     view_repo: "View repository",
     view_live: "View the live site",
     ongoing: "Ongoing",
-    t2_period: "[add year]",
     sol1_title: "Buttons",
     sol1_text: "They enable when the step is valid and say what is missing: Still to complete: …",
     sol2_title: "Errors",
